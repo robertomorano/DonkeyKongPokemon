@@ -1,0 +1,5167 @@
+fileFormatVersion: 2
+guid: b983d778f94ded74e9bddbbe44013cfe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7349742087937622420
+    second: Protagonista Clean_0
+  - first:
+      213: -8472264043207222075
+    second: Protagonista Clean_1
+  - first:
+      213: 534325501615208632
+    second: Protagonista Clean_2
+  - first:
+      213: 4211800661049238505
+    second: Protagonista Clean_3
+  - first:
+      213: 1525744135145652427
+    second: Protagonista Clean_4
+  - first:
+      213: 6926087167906469655
+    second: Protagonista Clean_5
+  - first:
+      213: 6820204053783018547
+    second: Protagonista Clean_6
+  - first:
+      213: 178939010499123949
+    second: Protagonista Clean_7
+  - first:
+      213: -4944817079661640246
+    second: Protagonista Clean_8
+  - first:
+      213: -6323060840392775345
+    second: Protagonista Clean_9
+  - first:
+      213: 3906573760080478585
+    second: Protagonista Clean_10
+  - first:
+      213: -2516819007785154918
+    second: Protagonista Clean_11
+  - first:
+      213: 8736665630522433952
+    second: Protagonista Clean_12
+  - first:
+      213: -5067632654215386604
+    second: Protagonista Clean_13
+  - first:
+      213: 5167720110373055247
+    second: Protagonista Clean_14
+  - first:
+      213: -3779182727084879834
+    second: Protagonista Clean_15
+  - first:
+      213: 4837861673716484715
+    second: Protagonista Clean_16
+  - first:
+      213: -7834431893265641960
+    second: Protagonista Clean_17
+  - first:
+      213: -8379969556922609455
+    second: Protagonista Clean_18
+  - first:
+      213: -4373021764758306758
+    second: Protagonista Clean_19
+  - first:
+      213: -5075397137653507413
+    second: Protagonista Clean_20
+  - first:
+      213: -128717525127220859
+    second: Protagonista Clean_21
+  - first:
+      213: -446203016581797676
+    second: Protagonista Clean_22
+  - first:
+      213: 7944251106445190297
+    second: Protagonista Clean_23
+  - first:
+      213: -2149831524958149428
+    second: Protagonista Clean_24
+  - first:
+      213: 5694616694487223578
+    second: Protagonista Clean_25
+  - first:
+      213: 464222852971737237
+    second: Protagonista Clean_26
+  - first:
+      213: -6836080627435857270
+    second: Protagonista Clean_27
+  - first:
+      213: -4360866996627619450
+    second: Protagonista Clean_28
+  - first:
+      213: -5114991909244088365
+    second: Protagonista Clean_29
+  - first:
+      213: 4198934104822503570
+    second: Protagonista Clean_30
+  - first:
+      213: -72772022220277223
+    second: Protagonista Clean_31
+  - first:
+      213: 7374663487256529129
+    second: Protagonista Clean_32
+  - first:
+      213: 4628303236617997718
+    second: Protagonista Clean_33
+  - first:
+      213: -2475439965457339842
+    second: Protagonista Clean_34
+  - first:
+      213: 3124456159232840622
+    second: Protagonista Clean_35
+  - first:
+      213: 3461505841717889119
+    second: Protagonista Clean_36
+  - first:
+      213: -7045956940256732095
+    second: Protagonista Clean_37
+  - first:
+      213: 3995825779026533559
+    second: Protagonista Clean_38
+  - first:
+      213: -8442269000488242678
+    second: Protagonista Clean_39
+  - first:
+      213: -4341402158658024240
+    second: Protagonista Clean_40
+  - first:
+      213: 2270129802957507637
+    second: Protagonista Clean_41
+  - first:
+      213: 6712126173106599046
+    second: Protagonista Clean_42
+  - first:
+      213: 8047558858835258771
+    second: Protagonista Clean_43
+  - first:
+      213: -1569444186341770238
+    second: Protagonista Clean_44
+  - first:
+      213: 976582290967928192
+    second: Protagonista Clean_45
+  - first:
+      213: -27280524053627058
+    second: Protagonista Clean_46
+  - first:
+      213: -8496432071529593378
+    second: Protagonista Clean_47
+  - first:
+      213: 2792412024573893854
+    second: Protagonista Clean_48
+  - first:
+      213: -4383071132191594344
+    second: Protagonista Clean_49
+  - first:
+      213: 5719161815561514086
+    second: Protagonista Clean_50
+  - first:
+      213: 8962493588978189990
+    second: Protagonista Clean_51
+  - first:
+      213: -8676945956119328835
+    second: Protagonista Clean_52
+  - first:
+      213: 2783439705184819005
+    second: Protagonista Clean_53
+  - first:
+      213: -794284360902482928
+    second: Protagonista Clean_54
+  - first:
+      213: -5086035037268061915
+    second: Protagonista Clean_55
+  - first:
+      213: -7442373345168341828
+    second: Protagonista Clean_56
+  - first:
+      213: 6831100672874246081
+    second: Protagonista Clean_57
+  - first:
+      213: 5746602210526498736
+    second: Protagonista Clean_58
+  - first:
+      213: -8460671462213726362
+    second: Protagonista Clean_59
+  - first:
+      213: -5928266362078075038
+    second: Protagonista Clean_60
+  - first:
+      213: -7687287248420875454
+    second: Protagonista Clean_61
+  - first:
+      213: 4881790705439813832
+    second: Protagonista Clean_62
+  - first:
+      213: 4473383730791769905
+    second: Protagonista Clean_63
+  - first:
+      213: -1339146102083745181
+    second: Protagonista Clean_64
+  - first:
+      213: -3736004425644896175
+    second: Protagonista Clean_65
+  - first:
+      213: 8544438966722555468
+    second: Protagonista Clean_66
+  - first:
+      213: -1896079086191504032
+    second: Protagonista Clean_67
+  - first:
+      213: -3940876703504905370
+    second: Protagonista Clean_68
+  - first:
+      213: -7971259680749180928
+    second: Protagonista Clean_69
+  - first:
+      213: 5813894141048653373
+    second: Protagonista Clean_70
+  - first:
+      213: -7708333319008412629
+    second: Protagonista Clean_71
+  - first:
+      213: -8160150158493475864
+    second: Protagonista Clean_72
+  - first:
+      213: -784800059086356298
+    second: Protagonista Clean_73
+  - first:
+      213: 461955999477967406
+    second: Protagonista Clean_74
+  - first:
+      213: -3633030485128090415
+    second: Protagonista Clean_75
+  - first:
+      213: 7853258330257738292
+    second: Protagonista Clean_76
+  - first:
+      213: -6343435924268640606
+    second: Protagonista Clean_77
+  - first:
+      213: 1117434492706459248
+    second: Protagonista Clean_78
+  - first:
+      213: -5049734802929923866
+    second: Protagonista Clean_79
+  - first:
+      213: 7834407307002587038
+    second: Protagonista Clean_80
+  - first:
+      213: 6583363962810540457
+    second: Protagonista Clean_81
+  - first:
+      213: -653963030069787054
+    second: Protagonista Clean_82
+  - first:
+      213: 945071165292270532
+    second: Protagonista Clean_83
+  - first:
+      213: 4045555482933645148
+    second: Protagonista Clean_84
+  - first:
+      213: 3084682309259282845
+    second: Protagonista Clean_85
+  - first:
+      213: 3512826550766139138
+    second: Protagonista Clean_86
+  - first:
+      213: -640804629547931562
+    second: Protagonista Clean_87
+  - first:
+      213: -2841909436535893705
+    second: Protagonista Clean_88
+  - first:
+      213: 550075286039559066
+    second: Protagonista Clean_89
+  - first:
+      213: -4997596012757542085
+    second: Protagonista Clean_90
+  - first:
+      213: -5257548078213700897
+    second: Protagonista Clean_91
+  - first:
+      213: 53444751616754635
+    second: Protagonista Clean_92
+  - first:
+      213: 290995123163235672
+    second: Protagonista Clean_93
+  - first:
+      213: 7902092522332802333
+    second: Protagonista Clean_94
+  - first:
+      213: 4061146242763722733
+    second: Protagonista Clean_95
+  - first:
+      213: -430518243577497901
+    second: Protagonista Clean_96
+  - first:
+      213: -1364163581162831157
+    second: Protagonista Clean_97
+  - first:
+      213: -2956907816127613761
+    second: Protagonista Clean_98
+  - first:
+      213: 63835332879837874
+    second: Protagonista Clean_99
+  - first:
+      213: 8383151091255843907
+    second: Protagonista Clean_100
+  - first:
+      213: -7939803875327753306
+    second: Protagonista Clean_101
+  - first:
+      213: 2143238511258460979
+    second: Protagonista Clean_102
+  - first:
+      213: 8328221267721969621
+    second: Protagonista Clean_103
+  - first:
+      213: -2573301050056992472
+    second: Protagonista Clean_104
+  - first:
+      213: 886870844481737278
+    second: Protagonista Clean_105
+  - first:
+      213: 7521636041350858386
+    second: Protagonista Clean_106
+  - first:
+      213: 6754897196655415900
+    second: Protagonista Clean_107
+  - first:
+      213: 1877374416092359516
+    second: Protagonista Clean_108
+  - first:
+      213: 7878829818066138472
+    second: Protagonista Clean_109
+  - first:
+      213: -3728223197425850714
+    second: Protagonista Clean_110
+  - first:
+      213: 6937891272292609580
+    second: Protagonista Clean_111
+  - first:
+      213: -2535990123970791625
+    second: Protagonista Clean_112
+  - first:
+      213: 4129462671741343052
+    second: Protagonista Clean_113
+  - first:
+      213: 8425149793874053768
+    second: Protagonista Clean_114
+  - first:
+      213: 4615817783905285807
+    second: Protagonista Clean_115
+  - first:
+      213: 3823438489180528932
+    second: Protagonista Clean_116
+  - first:
+      213: -6537494465832624485
+    second: Protagonista Clean_117
+  - first:
+      213: -1996872043069868500
+    second: Protagonista Clean_118
+  - first:
+      213: 3996928273513571514
+    second: Protagonista Clean_119
+  - first:
+      213: 5928655421658214961
+    second: Protagonista Clean_120
+  - first:
+      213: 4519539846094276660
+    second: Protagonista Clean_121
+  - first:
+      213: -700891249565696943
+    second: Protagonista Clean_122
+  - first:
+      213: -1247027316013467928
+    second: Protagonista Clean_123
+  - first:
+      213: -3652833652257518797
+    second: Protagonista Clean_124
+  - first:
+      213: -831381184749183160
+    second: Protagonista Clean_125
+  - first:
+      213: -3220088037532565002
+    second: Protagonista Clean_126
+  - first:
+      213: -5002895713483533835
+    second: Protagonista Clean_127
+  - first:
+      213: -8621548514454539760
+    second: Protagonista Clean_128
+  - first:
+      213: 6038660044815454175
+    second: Protagonista Clean_129
+  - first:
+      213: -3030530337679214677
+    second: Protagonista Clean_130
+  - first:
+      213: -8532808395316482436
+    second: Protagonista Clean_131
+  - first:
+      213: -420297888884376157
+    second: Protagonista Clean_132
+  - first:
+      213: 7953147704774296575
+    second: Protagonista Clean_133
+  - first:
+      213: -8851361739081436345
+    second: Protagonista Clean_134
+  - first:
+      213: 5036561597266805479
+    second: Protagonista Clean_135
+  - first:
+      213: 3073971726330490788
+    second: Protagonista Clean_136
+  - first:
+      213: -5710623804519841528
+    second: Protagonista Clean_137
+  - first:
+      213: 8574459049909584656
+    second: Protagonista Clean_138
+  - first:
+      213: 1027192086704539773
+    second: Protagonista Clean_139
+  - first:
+      213: 6205156922213247728
+    second: Protagonista Clean_140
+  - first:
+      213: 250353257691251269
+    second: Protagonista Clean_141
+  - first:
+      213: -9163532811875010912
+    second: Protagonista Clean_142
+  - first:
+      213: -1167571243719924453
+    second: Protagonista Clean_143
+  - first:
+      213: 7848162077240621494
+    second: Protagonista Clean_144
+  - first:
+      213: 4142495285064110338
+    second: Protagonista Clean_145
+  - first:
+      213: 7961384713968673632
+    second: Protagonista Clean_146
+  - first:
+      213: -8499514415140460500
+    second: Protagonista Clean_147
+  - first:
+      213: 4701844034454031356
+    second: Protagonista Clean_148
+  - first:
+      213: 8667213530722232507
+    second: Protagonista Clean_149
+  - first:
+      213: 5603682756102959764
+    second: Protagonista Clean_150
+  - first:
+      213: -7028259129787512144
+    second: Protagonista Clean_151
+  - first:
+      213: 2061140810797859166
+    second: Protagonista Clean_152
+  - first:
+      213: 3621711106062755350
+    second: Protagonista Clean_153
+  - first:
+      213: 8355514710806591384
+    second: Protagonista Clean_154
+  - first:
+      213: 9211175725371108217
+    second: Protagonista Clean_155
+  - first:
+      213: 3616190626031910804
+    second: Protagonista Clean_156
+  - first:
+      213: -2122507957652917479
+    second: Protagonista Clean_157
+  - first:
+      213: -6843343980621419529
+    second: Protagonista Clean_158
+  - first:
+      213: -7359435894437415888
+    second: Protagonista Clean_159
+  - first:
+      213: -4159474326070566210
+    second: Protagonista Clean_160
+  - first:
+      213: 5248815161019396237
+    second: Protagonista Clean_161
+  - first:
+      213: 7828441795211891359
+    second: Protagonista Clean_162
+  - first:
+      213: -2833019190205442791
+    second: Protagonista Clean_163
+  - first:
+      213: 3176627438380497327
+    second: Protagonista Clean_164
+  - first:
+      213: 3426992225177313262
+    second: Protagonista Clean_165
+  - first:
+      213: 1240678745061546279
+    second: Protagonista Clean_166
+  - first:
+      213: 2221800546843614695
+    second: Protagonista Clean_167
+  - first:
+      213: 2326476106645450087
+    second: Protagonista Clean_168
+  - first:
+      213: -4605051739983698500
+    second: Protagonista Clean_169
+  - first:
+      213: 6140189989953646755
+    second: Protagonista Clean_170
+  - first:
+      213: -8198867945418060899
+    second: Protagonista Clean_171
+  - first:
+      213: 211255511269822085
+    second: Protagonista Clean_172
+  - first:
+      213: -3065216767866635306
+    second: Protagonista Clean_173
+  - first:
+      213: -7728839180137011629
+    second: Protagonista Clean_174
+  - first:
+      213: -1545735766115914040
+    second: Protagonista Clean_175
+  - first:
+      213: 7016774609416239200
+    second: Protagonista Clean_176
+  - first:
+      213: -373690879999759413
+    second: Protagonista Clean_177
+  - first:
+      213: -1662273067699592491
+    second: Protagonista Clean_178
+  - first:
+      213: 573862688371042052
+    second: Protagonista Clean_179
+  - first:
+      213: -2280481965518795107
+    second: Protagonista Clean_180
+  - first:
+      213: -6253933959242827342
+    second: Protagonista Clean_181
+  - first:
+      213: 4594605465170445245
+    second: Protagonista Clean_182
+  - first:
+      213: 6298732405492739212
+    second: Protagonista Clean_183
+  - first:
+      213: -5788946478186775039
+    second: Protagonista Clean_184
+  - first:
+      213: 2037301093518768192
+    second: Protagonista Clean_185
+  - first:
+      213: -2813495155983864044
+    second: Protagonista Clean_186
+  - first:
+      213: -7530937431241151865
+    second: Protagonista Clean_187
+  - first:
+      213: -2735608124689161882
+    second: Protagonista Clean_188
+  - first:
+      213: 1507314098285842359
+    second: Protagonista Clean_189
+  - first:
+      213: -5145848375069609728
+    second: Protagonista Clean_190
+  - first:
+      213: 460465197411555258
+    second: Protagonista Clean_191
+  - first:
+      213: 6603014738885156779
+    second: Protagonista Clean_192
+  - first:
+      213: 1532797194996400948
+    second: Protagonista Clean_193
+  - first:
+      213: 1886586295531501779
+    second: Protagonista Clean_194
+  - first:
+      213: -5053289864932680034
+    second: Protagonista Clean_195
+  - first:
+      213: -4446242518357147809
+    second: Protagonista Clean_196
+  - first:
+      213: -6788589960185005941
+    second: Protagonista Clean_197
+  - first:
+      213: 7857955438566633486
+    second: Protagonista Clean_198
+  - first:
+      213: 5482634652510195186
+    second: Protagonista Clean_199
+  - first:
+      213: 4705524326095348812
+    second: Protagonista Clean_200
+  - first:
+      213: 7461163354940424209
+    second: Protagonista Clean_201
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Protagonista Clean_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 443
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6e7db9f288700a90800000000000000
+      internalID: -7349742087937622420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 445
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc915d9db87c6a80800000000000000
+      internalID: -8472264043207222075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 443
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8f436763e4a6700800000000000000
+      internalID: 534325501615208632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 443
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3689ad262537a30800000000000000
+      internalID: 4211800661049238505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 446
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc00e7905388c2510800000000000000
+      internalID: 1525744135145652427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_5
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 443
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717d47e45976e1060800000000000000
+      internalID: 6926087167906469655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_6
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 445
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c7a61b37b36ae50800000000000000
+      internalID: 6820204053783018547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_7
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 445
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea924df418bb7200800000000000000
+      internalID: 178939010499123949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 445
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5cb77901b706bb0800000000000000
+      internalID: -4944817079661640246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 445
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49a43baaa9ff38a0800000000000000
+      internalID: -6323060840392775345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_10
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 442
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971857a0320f63630800000000000000
+      internalID: 3906573760080478585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 442
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96c3057276721dd0800000000000000
+      internalID: -2516819007785154918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_12
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 442
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a167a42a1fde3970800000000000000
+      internalID: 8736665630522433952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_13
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 442
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a625153f62ca9b0800000000000000
+      internalID: -5067632654215386604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 416
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0bad658f0e67b740800000000000000
+      internalID: 5167720110373055247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_15
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 416
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62050da2555ad8bc0800000000000000
+      internalID: -3779182727084879834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_16
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 416
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a09566f89832340800000000000000
+      internalID: 4837861673716484715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_17
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 417
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e09e0a3b1864390800000000000000
+      internalID: -7834431893265641960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_18
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 418
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d05a03461e54bb80800000000000000
+      internalID: -8379969556922609455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_19
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 417
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30878ccfd7ef43c0800000000000000
+      internalID: -4373021764758306758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_20
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 412
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baad024a1319099b0800000000000000
+      internalID: -5075397137653507413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_21
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 413
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581bc66c714b63ef0800000000000000
+      internalID: -128717525127220859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_22
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 412
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d82fe278b4cec9f0800000000000000
+      internalID: -446203016581797676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_23
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 413
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9946b267a46af3e60800000000000000
+      internalID: 7944251106445190297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_24
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 413
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4eeeb4e934a22e0800000000000000
+      internalID: -2149831524958149428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_25
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 413
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d8be656b7570f40800000000000000
+      internalID: 5694616694487223578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_26
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 413
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590bff7a930417600800000000000000
+      internalID: 464222852971737237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_27
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 387
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a91c173ec5121a0800000000000000
+      internalID: -6836080627435857270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_28
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 389
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 681494942961b73c0800000000000000
+      internalID: -4360866996627619450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_29
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 387
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df428c75f5e309b0800000000000000
+      internalID: -5114991909244088365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_30
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 390
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298d739425c954a30800000000000000
+      internalID: 4198934104822503570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_31
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 393
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a39f93b367dfef0800000000000000
+      internalID: -72772022220277223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_32
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 391
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e808f77e51185660800000000000000
+      internalID: 7374663487256529129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_33
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 386
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d086b95490b3040800000000000000
+      internalID: 4628303236617997718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_34
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 387
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a2c14877875add0800000000000000
+      internalID: -2475439965457339842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_35
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 386
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3da5f925c4c5b20800000000000000
+      internalID: 3124456159232840622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_36
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 381
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f58c883293db90030800000000000000
+      internalID: 3461505841717889119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_37
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 380
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c9c417e7bb73e90800000000000000
+      internalID: -7045956940256732095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_38
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 377
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc993f0066047730800000000000000
+      internalID: 3995825779026533559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_39
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 375
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a023b97b21907da80800000000000000
+      internalID: -8442269000488242678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_40
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 361
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc031a0dbd30c3c0800000000000000
+      internalID: -4341402158658024240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_41
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 361
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c4f43370f118f10800000000000000
+      internalID: 2270129802957507637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_42
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 360
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684fe9b2133462d50800000000000000
+      internalID: 6712126173106599046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_43
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 364
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d6ce1f42caeaf60800000000000000
+      internalID: 8047558858835258771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_44
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 365
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20cfb4ae3d6383ae0800000000000000
+      internalID: -1569444186341770238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_45
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 364
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08d94136b648d8d00800000000000000
+      internalID: 976582290967928192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_46
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 355
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f3f7602841f9ff0800000000000000
+      internalID: -27280524053627058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_47
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 358
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed50e360c0c961a80800000000000000
+      internalID: -8496432071529593378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_48
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 345
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc914701f3a0c620800000000000000
+      internalID: 2792412024573893854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_49
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 345
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898637c17043c23c0800000000000000
+      internalID: -4383071132191594344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_50
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 345
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ca58dae5b8e5f40800000000000000
+      internalID: 5719161815561514086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_51
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 345
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a6c2c01f6c216c70800000000000000
+      internalID: 8962493588978189990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_52
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 326
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7ce3610ab459780800000000000000
+      internalID: -8676945956119328835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_53
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 313
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3752412aa3c0a620800000000000000
+      internalID: 2783439705184819005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_54
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 313
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01462c105922af4f0800000000000000
+      internalID: -794284360902482928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_55
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 298
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5215270a416ca69b0800000000000000
+      internalID: -5086035037268061915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_56
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 298
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4c76bbfd067b890800000000000000
+      internalID: -7442373345168341828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_57
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 298
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cfe9978ed1fcce50800000000000000
+      internalID: 6831100672874246081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_58
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 298
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf08ef734800cf40800000000000000
+      internalID: 5746602210526498736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_59
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 287
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f4775b128a59a80800000000000000
+      internalID: -8460671462213726362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_60
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 287
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267607a27219abda0800000000000000
+      internalID: -5928266362078075038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_61
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 286
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243db7ff9f4415590800000000000000
+      internalID: -7687287248420875454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_62
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 287
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c03b8128ca9fb340800000000000000
+      internalID: 4881790705439813832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_63
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 244
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137ead95dc6a41e30800000000000000
+      internalID: 4473383730791769905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_64
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 271
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a03fa17b56a6de0800000000000000
+      internalID: -1339146102083745181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_65
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 244
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1501622e4cb072cc0800000000000000
+      internalID: -3736004425644896175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_66
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 244
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ee08848f1f39670800000000000000
+      internalID: 8544438966722555468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_67
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 244
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0651281fd16cfa5e0800000000000000
+      internalID: -1896079086191504032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_68
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 244
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b4aff84813f49c0800000000000000
+      internalID: -3940876703504905370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_69
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 262
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0082d8ccd85606190800000000000000
+      internalID: -7971259680749180928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_70
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 262
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d360eeefae91fa050800000000000000
+      internalID: 5813894141048653373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_71
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 262
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c1236dfaf760590800000000000000
+      internalID: -7708333319008412629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_72
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 262
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb16294aa251ce80800000000000000
+      internalID: -8160150158493475864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_73
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 270
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0c37a1184db15f0800000000000000
+      internalID: -784800059086356298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_74
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 260
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2aaeb2b882396600800000000000000
+      internalID: 461955999477967406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_75
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 260
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc66cbb502e49dc0800000000000000
+      internalID: -3633030485128090415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_76
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 262
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ac360d7d06cfc60800000000000000
+      internalID: 7853258330257738292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_77
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 260
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a61486c2a697f7a0800000000000000
+      internalID: -6343435924268640606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_78
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 262
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e898d20cce18f00800000000000000
+      internalID: 1117434492706459248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_79
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 248
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e84f6d83fcbbe9b0800000000000000
+      internalID: -5049734802929923866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_80
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 250
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e972d9fefe769bc60800000000000000
+      internalID: 7834407307002587038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_81
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 250
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a12e6ed4aecc5b50800000000000000
+      internalID: 6583363962810540457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_82
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 250
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256c378c618ace6f0800000000000000
+      internalID: -653963030069787054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_83
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 250
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3d5b6b7319d1d00800000000000000
+      internalID: 945071165292270532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_84
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 250
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5fc4670743b42830800000000000000
+      internalID: 4045555482933645148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_85
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 250
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99c458873efeca20800000000000000
+      internalID: 3084682309259282845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_86
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 250
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 207f9fbd22110c030800000000000000
+      internalID: 3512826550766139138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_87
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 250
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 658ae55a5976b17f0800000000000000
+      internalID: -640804629547931562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_88
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 250
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731927fac628f88d0800000000000000
+      internalID: -2841909436535893705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_89
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 250
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9bfb18ee8242a700800000000000000
+      internalID: 550075286039559066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_90
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 250
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b9da0a7e8f4aab0800000000000000
+      internalID: -4997596012757542085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_91
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 250
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2e888e0ef6907b0800000000000000
+      internalID: -5257548078213700897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_92
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 226
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3c93be7bfddb000800000000000000
+      internalID: 53444751616754635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_93
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 228
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8550483d582d90400800000000000000
+      internalID: 290995123163235672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_94
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 226
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1dcaef284fd9ad60800000000000000
+      internalID: 7902092522332802333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_95
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 216
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def08dcadf61c5830800000000000000
+      internalID: 4061146242763722733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_96
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 238
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6fc3e30fd760af0800000000000000
+      internalID: -430518243577497901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_97
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 238
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc2c3495374811de0800000000000000
+      internalID: -1364163581162831157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_98
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 238
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb43322f104f6f6d0800000000000000
+      internalID: -2956907816127613761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_99
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 238
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2baeb64a5e9c2e000800000000000000
+      internalID: 63835332879837874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_100
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 238
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c9bbc608fe65470800000000000000
+      internalID: 8383151091255843907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_101
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 238
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3c1d8317620d190800000000000000
+      internalID: -7939803875327753306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_102
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 236
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3336f7412105ebd10800000000000000
+      internalID: 2143238511258460979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_103
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 238
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dfdb614e19c39370800000000000000
+      internalID: 8328221267721969621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_104
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 238
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8299633345cc94cd0800000000000000
+      internalID: -2573301050056992472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_105
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 238
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e321cfe855cce4c00800000000000000
+      internalID: 886870844481737278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_106
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 238
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2964e76d028326860800000000000000
+      internalID: 7521636041350858386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_107
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 238
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c529dec16373ebd50800000000000000
+      internalID: 6754897196655415900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_108
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 238
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b679da516cd0a10800000000000000
+      internalID: 1877374416092359516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_109
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 238
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8657697c9f9375d60800000000000000
+      internalID: 7878829818066138472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_110
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 238
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a6af0241c0b24cc0800000000000000
+      internalID: -3728223197425850714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_111
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 238
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ea8478a57584060800000000000000
+      internalID: 6937891272292609580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_112
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 238
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73772d22b6a5eccd0800000000000000
+      internalID: -2535990123970791625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_113
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 238
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45d06ecb6cce4930800000000000000
+      internalID: 4129462671741343052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_114
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 238
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a815369152ce470800000000000000
+      internalID: 8425149793874053768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_115
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 236
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa6fa9d91ddae0040800000000000000
+      internalID: 4615817783905285807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_116
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 187
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42169286c059f0530800000000000000
+      internalID: 3823438489180528932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_117
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 187
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9ed6f2ab672645a0800000000000000
+      internalID: -6537494465832624485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_118
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 187
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2679eae47fa944e0800000000000000
+      internalID: -1996872043069868500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_119
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 187
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4ed7f8611f77730800000000000000
+      internalID: 3996928273513571514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_120
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 212
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132b1a3d1b0d64250800000000000000
+      internalID: 5928655421658214961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_121
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 212
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4384ca26b81a8be30800000000000000
+      internalID: 4519539846094276660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_122
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 212
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15cf47b3f1fe546f0800000000000000
+      internalID: -700891249565696943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_123
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 212
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6fecb534ba1bee0800000000000000
+      internalID: -1247027316013467928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_124
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 212
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b099595278e4dc0800000000000000
+      internalID: -3652833652257518797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_125
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 212
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84fd412a7375674f0800000000000000
+      internalID: -831381184749183160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_126
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 212
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f103699df2ff43d0800000000000000
+      internalID: -3220088037532565002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_127
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 212
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f15d75ead4229ab0800000000000000
+      internalID: -5002895713483533835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_128
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 212
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012f3261e4b1a5880800000000000000
+      internalID: -8621548514454539760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_129
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 212
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdfc19a0151adc350800000000000000
+      internalID: 6038660044815454175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_130
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 212
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7f59dd6b461f5d0800000000000000
+      internalID: -3030530337679214677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_131
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 212
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ea0b429ff559980800000000000000
+      internalID: -8532808395316482436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_132
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 212
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad33310c4dca2af0800000000000000
+      internalID: -420297888884376157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_133
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 212
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3094d23b14f5e60800000000000000
+      internalID: 7953147704774296575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_134
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 212
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74331931565a92580800000000000000
+      internalID: -8851361739081436345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_135
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 200
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2467e761675e540800000000000000
+      internalID: 5036561597266805479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_136
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 200
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afe58d9ff0f8aa20800000000000000
+      internalID: 3073971726330490788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_137
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 199
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80184bde7e9cfb0b0800000000000000
+      internalID: -5710623804519841528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_138
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 200
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0138ef293199ef670800000000000000
+      internalID: 8574459049909584656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_139
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 159
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d78cd14b2c1514e00800000000000000
+      internalID: 1027192086704539773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_140
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 178
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0faa31c28552d1650800000000000000
+      internalID: 6205156922213247728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_141
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 178
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5428c0126fe697300800000000000000
+      internalID: 250353257691251269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_142
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 178
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a6bd84457794d080800000000000000
+      internalID: -9163532811875010912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_143
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 177
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15ec10d324fbcfe0800000000000000
+      internalID: -1167571243719924453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_144
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 169
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b97e91f3d54aec60800000000000000
+      internalID: 7848162077240621494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_145
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 172
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2011afd83891d7930800000000000000
+      internalID: 4142495285064110338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_146
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 170
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063e35457358c7e60800000000000000
+      internalID: 7961384713968673632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_147
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 131
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28ad3afba8ab0a80800000000000000
+      internalID: -8499514415140460500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_148
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 131
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb0ce6ec3e404140800000000000000
+      internalID: 4701844034454031356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_149
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 131
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8682b09c0284870800000000000000
+      internalID: 8667213530722232507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_150
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 132
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 492bf7fe6c744cd40800000000000000
+      internalID: 5603682756102959764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_151
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 132
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba8e9b0f8b967e90800000000000000
+      internalID: -7028259129787512144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_152
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 143
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51caa3a5a4aa9c10800000000000000
+      internalID: 2061140810797859166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_153
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 143
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61625f3ff07e24230800000000000000
+      internalID: 3621711106062755350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_154
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 141
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8977d2d2c50c4f370800000000000000
+      internalID: 8355514710806591384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_155
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 142
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b2272f48ba4df70800000000000000
+      internalID: 9211175725371108217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_156
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 97
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49fbab8073a4f2230800000000000000
+      internalID: 3616190626031910804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_157
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 99
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913782f02465b82e0800000000000000
+      internalID: -2122507957652917479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_158
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 97
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fba04f38ee8701a0800000000000000
+      internalID: -6843343980621419529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_159
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 99
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0347cc4cb080ed990800000000000000
+      internalID: -7359435894437415888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_160
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 101
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2e43663249646c0800000000000000
+      internalID: -4159474326070566210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_161
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 99
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80fe3c549987d840800000000000000
+      internalID: 5248815161019396237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_162
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 100
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f921d6cf55634ac60800000000000000
+      internalID: 7828441795211891359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_163
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 100
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91590f57e081fa8d0800000000000000
+      internalID: -2833019190205442791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_164
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 99
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9bd6023d5a51c20800000000000000
+      internalID: 3176627438380497327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_165
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 101
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef18b5954f1f8f20800000000000000
+      internalID: 3426992225177313262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_166
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 99
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72955c7ceb6c73110800000000000000
+      internalID: 1240678745061546279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_167
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 71
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7edd16463db65de10800000000000000
+      internalID: 2221800546843614695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_168
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 71
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d290b51bd494020800000000000000
+      internalID: 2326476106645450087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_169
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 70
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb52af157d19710c0800000000000000
+      internalID: -4605051739983698500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_170
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 72
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0b8948346563550800000000000000
+      internalID: 6140189989953646755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_171
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 73
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b05090b05c73e80800000000000000
+      internalID: -8198867945418060899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_172
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 72
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ec41aa4c78ee200800000000000000
+      internalID: 211255511269822085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_173
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 72
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbfcbff6992675d0800000000000000
+      internalID: -3065216767866635306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_174
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 73
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356efcdf6b5adb490800000000000000
+      internalID: -7728839180137011629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_175
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 73
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce6b08a2817c8ae0800000000000000
+      internalID: -1545735766115914040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_176
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 73
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0683c3fa457906160800000000000000
+      internalID: 7016774609416239200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_177
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 72
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcbafc1ef1260daf0800000000000000
+      internalID: -373690879999759413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_178
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 72
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d22118b37b6ee8e0800000000000000
+      internalID: -1662273067699592491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_179
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 71
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407e43a1315c6f700800000000000000
+      internalID: 573862688371042052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_180
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 72
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e41902cb91a50e0800000000000000
+      internalID: -2280481965518795107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_181
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 40
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b93496e2309539a0800000000000000
+      internalID: -6253933959242827342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_182
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 42
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db38d8ac35153cf30800000000000000
+      internalID: 4594605465170445245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_183
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 40
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ce2ac20c7996750800000000000000
+      internalID: 6298732405492739212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_184
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 43
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ebde769d789afa0800000000000000
+      internalID: -5788946478186775039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_185
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 46
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04873bbec82f54c10800000000000000
+      internalID: 2037301093518768192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_186
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 43
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41fac4aef0574f8d0800000000000000
+      internalID: -2813495155983864044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_187
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 28
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78aad219e4cbc7790800000000000000
+      internalID: -7530937431241151865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_188
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 28
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661ea3b87ea290ad0800000000000000
+      internalID: -2735608124689161882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_189
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 42
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf0441bf2e0be410800000000000000
+      internalID: 1507314098285842359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_190
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 45
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00174ffaa264698b0800000000000000
+      internalID: -5145848375069609728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_191
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 43
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7552b48a6e36600800000000000000
+      internalID: 460465197411555258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_192
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 14
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf1be5bbee92ab50800000000000000
+      internalID: 6603014738885156779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_193
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 14
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433c9708de6954510800000000000000
+      internalID: 1532797194996400948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_194
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 13
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8764f7d308e2a10800000000000000
+      internalID: 1886586295531501779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_195
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 16
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e1b9d24ab1fd9b0800000000000000
+      internalID: -5053289864932680034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_196
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 17
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f751c9cf5cb42c0800000000000000
+      internalID: -4446242518357147809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_197
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 16
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b88b36116651ac1a0800000000000000
+      internalID: -6788589960185005941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_198
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 16
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00fc9096d01d0d60800000000000000
+      internalID: 7857955438566633486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_199
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 16
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd0e101b2b361c40800000000000000
+      internalID: 5482634652510195186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_200
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 15
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c446fd291716d4140800000000000000
+      internalID: 4705524326095348812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protagonista Clean_201
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 16
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110c2665a806b8760800000000000000
+      internalID: 7461163354940424209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
