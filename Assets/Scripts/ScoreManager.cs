@@ -58,6 +58,7 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int amount)
     {
         currentScore += amount;
+        timer = 0f;
         UpdateScoreUI();
     }
 
