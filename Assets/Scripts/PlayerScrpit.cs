@@ -112,6 +112,7 @@ public class Player : MonoBehaviour
     {
         grounded = false;
         climbing = false;
+        //da
 
         float skinWidth = 0.05f;
         Vector2 size = capsuleCollider.size;
