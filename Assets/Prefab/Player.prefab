@@ -103,8 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1250d45b41a95747b90ca3b59d9854b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runSprites: []
+  climbSprite: {fileID: 0}
   moveSpeed: 3
-  jumpForce: 4
+  jumpStrength: 4
 --- !u!95 &8291400523361049251
 Animator:
   serializedVersion: 7
@@ -190,4 +192,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
