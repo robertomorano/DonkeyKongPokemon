@@ -104,36 +104,46 @@ public class Player : MonoBehaviour
 
     private void DetectarEscaleras()
     {
+        // Detecta si el jugador está frente a la escalera
         climbing = Physics2D.Raycast(transform.position, Vector2.up, 0.3f, LayerMask.GetMask("Ladder"));
 
-        if (climbing)
+        // Si está en escalera y presiona W
+        if (climbing && Input.GetKey(KeyCode.W))
+        {
             rb.gravityScale = 0f;
+        }
         else
+        {
             rb.gravityScale = gravityScale;
+        }
     }
 
     private void MoverJugador()
     {
         if (climbing)
         {
-            rb.linearVelocity = new Vector2(horizontal * moveSpeed, vertical * moveSpeed);
+            float climbSpeed = 3f; // Puedes ajustar la velocidad de subir escaleras
+
+            // Subir solo con W
+            float climbDirection = Input.GetKey(KeyCode.W) ? 1f : 0f;
+            rb.linearVelocity = new Vector2(horizontal * moveSpeed, climbDirection * climbSpeed);
+
             jumpPressed = false; // Resetear salto si está escalando
             return;
         }
 
-        // Movimiento horizontal
+        // Movimiento horizontal normal
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
 
         // Salto
         if (grounded && jumpPressed)
         {
-            Debug.Log("¡Saltando!");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
         }
 
-        // Resetear el salto después de procesarlo
         jumpPressed = false;
     }
+
 
     private void FlipSprite()
     {
