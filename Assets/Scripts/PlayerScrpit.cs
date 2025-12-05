@@ -3,13 +3,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private float horizontal;
-    private float vertical;
     private bool jumpPressed;
 
     [Header("Movimiento")]
     [SerializeField] private float moveSpeed = 6f;
     [SerializeField] private float jumpStrength = 8f;
     [SerializeField] private float gravityScale = 3f;
+    [SerializeField] private float climbSpeed = 1.5f;
 
     [Header("Referencias")]
     [SerializeField] private Transform groundCheck;
@@ -21,9 +21,10 @@ public class Player : MonoBehaviour
     private Animator animator;
     private bool grounded;
     private bool climbing;
+    private bool nearLadder;
+    private GameObject currentLadder;
     private int Vida = 3;
 
-    // Para controlar el flip sin afectar el scale
     private bool facingRight = true;
 
     void Start()
@@ -31,45 +32,29 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = gravityScale;
 
-        // Si no asignaste spriteTransform en el inspector
         if (spriteTransform == null)
         {
-            // Busca el hijo con SpriteRenderer
             SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
             if (sr != null)
                 spriteTransform = sr.transform;
         }
 
-        // Buscar el Animator en el mismo objeto que el SpriteRenderer
         if (spriteTransform != null)
-        {
             animator = spriteTransform.GetComponent<Animator>();
-        }
 
-        // Si aún no lo encuentra, intentar buscarlo en el Player
         if (animator == null)
-        {
             animator = GetComponent<Animator>();
-        }
 
-        // Verificar que todo esté asignado
         if (animator == null)
-            Debug.LogWarning("¡Animator no encontrado! Asegúrate de tener un Animator en el objeto con el SpriteRenderer");
+            Debug.LogWarning("¡Animator no encontrado!");
     }
 
     void Update()
     {
         LeerInput();
         DetectarSuelo();
-        DetectarEscaleras();
         FlipSprite();
-        ActualizarAnimator(); // Mover DESPUÉS de FlipSprite
-
-        // Debug para verificar valores
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Debug.Log($"Horizontal: {horizontal}, Grounded: {grounded}, Animator: {(animator != null ? "OK" : "NULL")}");
-        }
+        ActualizarAnimator();
     }
 
     private void FixedUpdate()
@@ -80,13 +65,10 @@ public class Player : MonoBehaviour
     private void LeerInput()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
 
-        // Leer espacio para saltar
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jumpPressed = true;
-            Debug.Log("Espacio presionado!");
         }
     }
 
@@ -102,40 +84,23 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void DetectarEscaleras()
-    {
-        // Detecta si el jugador está frente a la escalera
-        climbing = Physics2D.Raycast(transform.position, Vector2.up, 0.3f, LayerMask.GetMask("Ladder"));
-
-        // Si está en escalera y presiona W
-        if (climbing && Input.GetKey(KeyCode.W))
-        {
-            rb.gravityScale = 0f;
-        }
-        else
-        {
-            rb.gravityScale = gravityScale;
-        }
-    }
-
     private void MoverJugador()
     {
-        if (climbing)
+        if (climbing && currentLadder != null)
         {
-            float climbSpeed = 3f; // Puedes ajustar la velocidad de subir escaleras
+            float verticalInput = 0f;
+            if (Input.GetKey(KeyCode.W)) verticalInput = 1f;
+            else if (Input.GetKey(KeyCode.S)) verticalInput = -1f;
 
-            // Subir solo con W
-            float climbDirection = Input.GetKey(KeyCode.W) ? 1f : 0f;
-            rb.linearVelocity = new Vector2(horizontal * moveSpeed, climbDirection * climbSpeed);
-
-            jumpPressed = false; // Resetear salto si está escalando
+            rb.linearVelocity = new Vector2(horizontal * moveSpeed, verticalInput * climbSpeed);
+            rb.gravityScale = 0f;
+            jumpPressed = false;
             return;
         }
 
-        // Movimiento horizontal normal
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
+        rb.gravityScale = gravityScale;
 
-        // Salto
         if (grounded && jumpPressed)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
@@ -144,24 +109,20 @@ public class Player : MonoBehaviour
         jumpPressed = false;
     }
 
-
     private void FlipSprite()
     {
         if (spriteTransform == null) return;
 
-        // Obtener el scale actual
         Vector3 currentScale = spriteTransform.localScale;
 
-        // Girar a la derecha
         if (horizontal > 0f)
         {
-            currentScale.x = Mathf.Abs(currentScale.x); // Asegurar que sea positivo
+            currentScale.x = Mathf.Abs(currentScale.x);
             facingRight = true;
         }
-        // Girar a la izquierda
         else if (horizontal < 0f)
         {
-            currentScale.x = -Mathf.Abs(currentScale.x); // Asegurar que sea negativo
+            currentScale.x = -Mathf.Abs(currentScale.x);
             facingRight = false;
         }
 
@@ -170,31 +131,55 @@ public class Player : MonoBehaviour
 
     private void ActualizarAnimator()
     {
-        if (animator == null)
-        {
-            Debug.LogError("¡Animator es NULL! Verifica que esté asignado.");
-            return;
-        }
-
-        // Verificar que el animator esté habilitado
-        if (!animator.enabled)
-        {
-            Debug.LogError("¡Animator está deshabilitado!");
-            animator.enabled = true;
-        }
+        if (animator == null) return;
 
         bool isRunning = horizontal != 0f && grounded;
         bool isJumping = !grounded && !climbing;
 
-        // Establecer los parámetros
         animator.SetBool("Running", isRunning);
         animator.SetBool("Climbing", climbing);
         animator.SetBool("jumping", isJumping);
+    }
 
-        // Debug cada segundo para no llenar la consola
-        if (Time.frameCount % 60 == 0)
+    // Detectar escaleras usando trigger y GameObject
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
         {
-            Debug.Log($"Animator UPDATE - Running: {isRunning}, Climbing: {climbing}, Jumping: {isJumping}");
+            nearLadder = true;
+            currentLadder = collision.gameObject;
+            Debug.Log("Cerca de una escalera");
+            climbing = false; // se activará al presionar W/S
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            currentLadder = collision.gameObject;
+            Debug.Log("En la escalera");
+
+            // Activar climbing solo si se presiona W o S
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+            {
+                climbing = true;
+            }
+            else
+            {
+                climbing = false;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            nearLadder = false;
+            climbing = false;
+            Debug.Log("Fuera de la escalera");
+            currentLadder = null;
         }
     }
 
@@ -208,7 +193,6 @@ public class Player : MonoBehaviour
             if (Vida <= 0)
             {
                 Debug.Log("Jugador ha muerto");
-                // Aquí podrías agregar: Destroy(gameObject);
             }
         }
     }
