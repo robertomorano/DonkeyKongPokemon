@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2122116890618201811}
   - component: {fileID: -2302228731692967616}
   - component: {fileID: -1592259159751946061}
+  - component: {fileID: 7123313673807317550}
   m_Layer: 0
   m_Name: Vigorote
   m_TagString: Untagged
@@ -128,6 +129,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f72e4d938a4b445a44517e3d771ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrel: {fileID: 0}
+  animator: {fileID: 7123313673807317550}
+  barrel: {fileID: 5596808432490341958, guid: 4943acca3485f24429a2cfc499985e5e, type: 3}
   minTime: 2
   maxTime: 4
+--- !u!95 &7123313673807317550
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7619763274920972283}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f913205b8fb3d9649b3fb759738cae49, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

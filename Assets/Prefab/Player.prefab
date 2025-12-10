@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.53, y: -4.04, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,10 +103,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1250d45b41a95747b90ca3b59d9854b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSprites: []
-  climbSprite: {fileID: 0}
   moveSpeed: 3
   jumpStrength: 4
+  gravityScale: 3
+  climbSpeed: 1.5
+  groundCheck: {fileID: 0}
+  groundRadius: 0.18
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  spriteTransform: {fileID: 0}
 --- !u!95 &8291400523361049251
 Animator:
   serializedVersion: 7
