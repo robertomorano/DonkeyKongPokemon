@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     private bool climbing;
     private bool nearLadder;
     private GameObject currentLadder;
-    private int Vida = 3;
+
 
     private bool facingRight = true;
 
@@ -183,19 +183,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Obstacle"))
-        {
-            Vida--;
-            Debug.Log($"¡Golpe! Vida restante: {Vida}");
-
-            if (Vida <= 0)
-            {
-                Debug.Log("Jugador ha muerto");
-            }
-        }
-    }
 
     private void OnDrawGizmosSelected()
     {
