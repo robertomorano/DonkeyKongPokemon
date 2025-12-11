@@ -1,32 +1,40 @@
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Animations;
 
 public class Spawner : MonoBehaviour
 {
 
     public Animator animator;
+
+    // Asumiendo que estas variables están definidas y asignadas en el Inspector
     public GameObject barrel;
-    public float minTime = 2.0f;
-    public float maxTime = 4.0f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float minTime = 1f;
+    public float maxTime = 3f;
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        // Llama a la primera ejecución.
         Spawn();
     }
 
     private void Spawn()
     {
         // 1. Instanciar el objeto
+        animator.SetTrigger("Launch");
+        
+
+        // 2. Instanciar el objeto (el barril)
         Instantiate(barrel, transform.position, Quaternion.identity);
 
-        // 2. Disparar el Trigger (la animación se ejecuta y se resetea automáticamente)
-        if (animator != null)
-        {
-            animator.SetTrigger("Launch"); // Usa el nombre de tu Trigger aquí
-        }
-
-        // 3. Re-invocar para la siguiente aparición
-        Invoke(nameof(Spawn), Random.Range(minTime, maxTime));
+        // 3. Programar el siguiente Spawn de manera recurrente
+        float nextSpawnTime = Random.Range(minTime, maxTime);
+        Invoke(nameof(Spawn), nextSpawnTime);
+        
     }
-    
+    void FixedUpdate()
+    {
+        
+    }
 }
