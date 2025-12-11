@@ -13,8 +13,10 @@ public class VoltorbScript : MonoBehaviour
     }
     private void Start()
     {
+        Vector2 direction = new Vector2(-0.8f, 0.0f);
+        rb.linearVelocity = direction * speed;
         //Generar numero aletaorio pa posicion
-      //  target = endPoint2;
+        //  target = endPoint2;
     }
 
     private void Update()
@@ -26,8 +28,7 @@ public class VoltorbScript : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //Vector2 direction = (transform.position).normalized;
-       // rb.linearVelocity = direction * speed;
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

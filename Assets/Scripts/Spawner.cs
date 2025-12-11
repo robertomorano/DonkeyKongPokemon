@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     // Asumiendo que estas variables están definidas y asignadas en el Inspector
     public GameObject barrel;
     public float minTime = 1f;
-    public float maxTime = 3f;
+    public float maxTime = 4f;
 
     void Start()
     {
