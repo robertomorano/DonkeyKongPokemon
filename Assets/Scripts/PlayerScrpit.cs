@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     private bool climbing;
     private bool nearLadder;
     private GameObject currentLadder;
-
+    private Collider2D playerCollider;
 
     private bool facingRight = true;
 
@@ -31,6 +31,13 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = gravityScale;
+
+        // Obtener el collider del jugador
+        playerCollider = GetComponent<Collider2D>();
+        if (playerCollider == null)
+        {
+            Debug.LogError("¡No se encontró Collider2D en el jugador!");
+        }
 
         if (spriteTransform == null)
         {
@@ -92,11 +99,20 @@ public class Player : MonoBehaviour
             if (Input.GetKey(KeyCode.W)) verticalInput = 1f;
             else if (Input.GetKey(KeyCode.S)) verticalInput = -1f;
 
+            // Movimiento en la escalera (puede quedarse quieto si no presiona nada)
             rb.linearVelocity = new Vector2(horizontal * moveSpeed, verticalInput * climbSpeed);
             rb.gravityScale = 0f;
+
+            // Desactivar colisiones con el suelo mientras escala
+            IgnoreGroundCollision(true);
+
+            // No permitir salto normal mientras escala
             jumpPressed = false;
             return;
         }
+
+        // Reactivar colisiones con el suelo cuando NO está escalando
+        IgnoreGroundCollision(false);
 
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
         rb.gravityScale = gravityScale;
@@ -107,6 +123,24 @@ public class Player : MonoBehaviour
         }
 
         jumpPressed = false;
+    }
+
+    // Método para ignorar/reactivar colisiones con el suelo
+    private void IgnoreGroundCollision(bool ignore)
+    {
+        if (playerCollider == null) return;
+
+        // Obtener todos los colliders del layer de suelo
+        Collider2D[] groundColliders = Physics2D.OverlapCircleAll(
+            transform.position,
+            10f, // Radio de búsqueda amplio
+            groundLayer
+        );
+
+        foreach (Collider2D groundCol in groundColliders)
+        {
+            Physics2D.IgnoreCollision(playerCollider, groundCol, ignore);
+        }
     }
 
     private void FlipSprite()
@@ -134,11 +168,9 @@ public class Player : MonoBehaviour
         if (animator == null) return;
 
         bool isRunning = horizontal != 0f && grounded;
-        bool isJumping = !grounded && !climbing;
 
         animator.SetBool("Running", isRunning);
         animator.SetBool("Climbing", climbing);
-        animator.SetBool("jumping", isJumping);
     }
 
     // Detectar escaleras usando trigger y GameObject
@@ -158,14 +190,15 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Ladder"))
         {
             currentLadder = collision.gameObject;
-            Debug.Log("En la escalera");
 
-            // Activar climbing solo si se presiona W o S
+            // Activar climbing al presionar W o S por primera vez
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
             {
                 climbing = true;
             }
-            else
+
+            // Desactivar climbing solo si presiona Space (saltar) para salir de la escalera
+            if (Input.GetKeyDown(KeyCode.Space) && climbing)
             {
                 climbing = false;
             }
@@ -180,9 +213,11 @@ public class Player : MonoBehaviour
             climbing = false;
             Debug.Log("Fuera de la escalera");
             currentLadder = null;
+
+            // Asegurar que las colisiones se reactiven al salir
+            IgnoreGroundCollision(false);
         }
     }
-
 
     private void OnDrawGizmosSelected()
     {
@@ -190,6 +225,15 @@ public class Player : MonoBehaviour
         {
             Gizmos.color = grounded ? Color.green : Color.red;
             Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+     if(collision.gameObject.layer == LayerMask.NameToLayer("KillZone"))
+        {
+            GameManager.Instance.HandlePlayerHit();
+
         }
     }
 }
