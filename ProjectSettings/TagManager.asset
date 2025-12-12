@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Ladder
+  - rod
   layers:
   - Default
   - TransparentFX
