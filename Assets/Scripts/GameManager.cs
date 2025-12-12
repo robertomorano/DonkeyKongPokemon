@@ -11,8 +11,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public GameObject player;
+    public GameObject startPosition;
 
-    Transform initialPosition;
+
+    
     public int lifes = 5; // Vida total. Es mejor si es un número que se divide bien por 3 o 2
                           // Se asume que 'lifes' representa la vida actual.
 
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        initialPosition = player.transform;
+        player.transform.position = startPosition.transform.position;
         CurrentSceneName = SceneManager.GetActiveScene().name;
 
         // Guardar la vida máxima al inicio
@@ -132,7 +134,7 @@ public class GameManager : MonoBehaviour
         {
             rb.linearVelocity = Vector2.zero; // Corregido a 'velocity' en lugar de 'linearVelocity'
         }
-        player.transform.position = initialPosition.position;
+        player.transform.position = startPosition.transform.position;
     }
 
 
