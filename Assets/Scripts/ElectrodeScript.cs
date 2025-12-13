@@ -1,240 +1,59 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class ElectrodeScript : MonoBehaviour
+public class ElectrodeScript : VoltorbScript
 {
-    // --- Configuración Pública ---
-    [Header("Movement")]
-    public float rollSpeed = 3f;
-    [Range(0f, 1f)]
-    public float ladderDescentChance = 0.4f;
+    [Header("Explosive Settings")]
+    public float timeToExplode = 5f;
+    public float explosionRadius = 2.0f;
 
-    // --- Componentes y Estado ---
-    private Rigidbody2D rb;
-
-    [Tooltip("Dirección horizontal actual de rodadura (-1: Izquierda, 1: Derecha)")]
-    public float horizontalDirection = -1f; // Iniciar rodando hacia la izquierda
-    private bool isRollingDownLadder = false;
-
-    // --- Capas y Constantes ---
-    private int groundLayer;
-    private int playerLayer;
-    private int killZoneLayer;
-    private int inverterWallLayer;
-    private const float OVERLAP_CHECK_RADIUS = 0.5f;
-
-    // Colisionadores de suelo ignorados durante el descenso por escalera
-    private readonly List<Collider2D> ignoredGroundColliders = new List<Collider2D>();
-
-    private void Awake()
+    // Llamado cuando el script se activa.
+    void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        InitializeLayers();
+        // Usar la función Invoke para detonar después de un tiempo.
+        Invoke(nameof(Explode), timeToExplode);
     }
 
-    private void InitializeLayers()
+    // Sobrescribir (override) la lógica de la colisión base:
+    // Al chocar con el jugador, el barril explosivo detona inmediatamente.
+    /*protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        groundLayer = LayerMask.NameToLayer("Ground");
-        playerLayer = LayerMask.NameToLayer("Player");
-        killZoneLayer = LayerMask.NameToLayer("KillZone");
-        inverterWallLayer = LayerMask.NameToLayer("Wall");
+        // 1. Ejecutar la lógica de colisión base (movimiento, inversión, etc.)
+        base.OnCollisionEnter2D(collision);
 
-    }
-
-    private void Start()
-    {
-        // Establecer la velocidad inicial de rodadura
-        rb.linearVelocity = new Vector2(horizontalDirection * rollSpeed, 0f);
-    }
-
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        GameObject collidedObject = collision.gameObject;
-        int collidedLayer = collidedObject.layer;
-
-        if (HandleDestructiveCollisions(collidedLayer, collidedObject))
+        // 2. Lógica específica del barril explosivo:
+        if (collision.gameObject.layer == playerLayer)
         {
-            return;
+            // El barril explosivo detona al golpear al jugador.
+            CancelInvoke(nameof(Explode)); // Si el temporizador estaba activo
+            Explode();
+        }
+    }*/
+
+    private void Explode()
+    {
+        // Evitar que el código base siga moviendo o manipulando el barril.
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.simulated = false; // Detiene la simulación de física
         }
 
-        // 1. Manejar colisión con el suelo (Aterrizajes)
-        if (collidedLayer == groundLayer)
-        {
-            // El barril aterrizó. Solo reanuda velocidad, no invierte dirección.
-            UpdateHorizontalVelocity();
-            return;
-        }
+        // --- LÓGICA DE DETECCIÓN DE DAÑO (Zona de Explosión) ---
 
-        // 2. Manejar colisión con la pared inversora (con Bouncing)
-        if (collidedLayer == inverterWallLayer)
-        {
-            HandleInverterWallCollision(collision);
-        }
-    }
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        foreach (Collider2D hit in hits)
         {
-            HandlePlayerHit();
-        }
-
-        if (other.CompareTag("LadderDescend") && !isRollingDownLadder)
-        {
-            TryStartLadderDescent();
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("LadderDescend") && isRollingDownLadder)
-        {
-            EndLadderDescent();
-        }
-    }
-
-    // --- Métodos de Lógica de Colisión y Destrucción ---
-
-    private bool HandleDestructiveCollisions(int layer, GameObject obj)
-    {
-        if (layer == killZoneLayer || layer == playerLayer)
-        {
-            if (layer == playerLayer)
+            if (hit.CompareTag("Player"))
             {
+                // Manejar el daño al jugador
                 GameManager.Instance.HandlePlayerHit();
             }
-            Destroy(gameObject);
-            return true;
-        }
-        return false;
-    }
-
-    private void HandlePlayerHit()
-    {
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.HandlePlayerHit();
-        }
-        Destroy(gameObject);
-    }
-
-    private void HandleGroundCollision(GameObject collidedObject, Collision2D collision)
-    {
-        // 1. Obtener la normal de colisión.
-        // La normal es un vector perpendicular a la superficie de contacto.
-        Vector2 normal = collision.contacts[0].normal;
-        const float LATERAL_THRESHOLD = 0.3f;
-        // Si choca con un objeto con Tags que no deben invertir el movimiento
-        if (collidedObject.CompareTag("Finish") || collidedObject.CompareTag("Respawn"))
-        {
-            UpdateHorizontalVelocity();
-            return;
         }
 
-        // 2. Comprobar si la colisión es lateral (choque de pared)
-        // Usamos un umbral (ej. 0.2f) para determinar si la colisión es horizontal.
-        // Si la componente Y de la normal es pequeña, la colisión es lateral.
-        // Mathf.Abs(normal.y) < 0.2f significa que la superficie de contacto es casi vertical.
-        if (Mathf.Abs(normal.y) < LATERAL_THRESHOLD)
-        {
-            // Choca con pared normal (Ground) -> Invertir dirección
-            horizontalDirection *= -1f;
-            UpdateHorizontalVelocity();
-        }
-        // Si no es una colisión lateral (es un aterrizaje), simplemente reanudamos la velocidad
-        // en caso de que la fricción la haya disminuido.
-        else
-        {
-            UpdateHorizontalVelocity();
-        }
-    }
+        // Ejecutar efectos visuales y de audio de la explosión (ej. Instantiate(ExplosionPrefab)).
 
-    private void HandleInverterWallCollision(Collision2D collision)
-    {
-        // Solo invertiremos la dirección si el golpe es claramente lateral.
-        // Esto evita que el rebote sutil en un borde active la inversión.
-        Vector2 normal = collision.contacts[0].normal;
-        const float LATERAL_THRESHOLD = 0.3f; // Ajusta este valor
-
-        if (Mathf.Abs(normal.y) < LATERAL_THRESHOLD)
-        {
-            // Choca con pared -> Invertir dirección
-            horizontalDirection *= -1f;
-        }
-
-        // El rebote de Unity (bouncing) ya habrá aplicado un impulso, 
-        // pero aseguramos la velocidad base.
-        UpdateHorizontalVelocity();
-    }
-
-
-    private void UpdateHorizontalVelocity()
-    {
-        rb.linearVelocity = new Vector2(horizontalDirection * rollSpeed, rb.linearVelocity.y);
-    }
-
-    // --- Lógica de Escalera ---
-
-    private void TryStartLadderDescent()
-    {
-        // Comprobar la probabilidad de bajar la escalera
-        if (Random.value < ladderDescentChance)
-        {
-            isRollingDownLadder = true;
-
-            // Deshabilitar colisión con el suelo y detener el movimiento horizontal
-            ToggleGroundCollisions(true);
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-        }
-    }
-
-    private void EndLadderDescent()
-    {
-        isRollingDownLadder = false;
-
-        // 1. FORZAR la inversión de la dirección horizontal al terminar el descenso
-        horizontalDirection *= -1f;
-
-        // 2. Reanudar Colisiones con el Suelo
-        ToggleGroundCollisions(false);
-
-        // 3. Reanudar el movimiento horizontal con la NUEVA dirección
-        UpdateHorizontalVelocity();
-    }
-
-    private void ToggleGroundCollisions(bool ignore)
-    {
-        // Encontramos los colisionadores de suelo cercanos para ignorarlos o restaurarlos.
-        Collider2D barrelCollider = GetComponent<Collider2D>();
-
-        if (ignore)
-        {
-            ignoredGroundColliders.Clear();
-
-            // Buscar colisionadores de suelo en un radio pequeño alrededor del barril.
-            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, OVERLAP_CHECK_RADIUS);
-
-            foreach (Collider2D hitCollider in hitColliders)
-            {
-                if (hitCollider.gameObject.layer == groundLayer)
-                {
-                    Physics2D.IgnoreCollision(barrelCollider, hitCollider, true);
-                    ignoredGroundColliders.Add(hitCollider);
-                }
-            }
-        }
-        else // Restaurar colisiones
-        {
-            foreach (Collider2D ignoredCollider in ignoredGroundColliders)
-            {
-                if (ignoredCollider != null)
-                {
-                    Physics2D.IgnoreCollision(barrelCollider, ignoredCollider, false);
-                }
-            }
-            ignoredGroundColliders.Clear();
-        }
+        Destroy(gameObject); // Eliminar el barril
     }
 }

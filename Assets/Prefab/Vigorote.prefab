@@ -130,7 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7123313673807317550}
-  barrel: {fileID: 5596808432490341958, guid: 4943acca3485f24429a2cfc499985e5e, type: 3}
+  normalBarrelPrefab: {fileID: 5596808432490341958, guid: 4943acca3485f24429a2cfc499985e5e, type: 3}
+  explosiveBarrelPrefab: {fileID: 209245728650688344, guid: 0ee11668986fc1d42a6900699d3c3313, type: 3}
+  explosiveSpawnChance: 0.25
   minTime: 2
   maxTime: 4
 --- !u!95 &7123313673807317550
