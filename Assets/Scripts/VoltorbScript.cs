@@ -17,9 +17,9 @@ public class VoltorbScript : MonoBehaviour
     private bool isRollingDownLadder = false;
 
     // --- Capas y Constantes ---
-    private int groundLayer;
-    private int playerLayer;
-    private int killZoneLayer;
+    public int groundLayer;
+    public int playerLayer;
+    public int killZoneLayer;
 
 
     
@@ -30,7 +30,7 @@ public class VoltorbScript : MonoBehaviour
     // Colisionadores de suelo ignorados durante el descenso por escalera
     private readonly List<Collider2D> ignoredGroundColliders = new List<Collider2D>();
 
-    private void Awake()
+    public void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         InitializeLayers();
@@ -54,7 +54,7 @@ public class VoltorbScript : MonoBehaviour
 
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject collidedObject = collision.gameObject;
         int collidedLayer = collidedObject.layer;

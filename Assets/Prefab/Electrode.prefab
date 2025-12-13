@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -4354004993814845000}
   - component: {fileID: 384689729786916676}
   - component: {fileID: 2984468293743626510}
+  - component: {fileID: 7428185396535777578}
   m_Layer: 9
   m_Name: Electrode
   m_TagString: Untagged
@@ -169,5 +170,30 @@ MonoBehaviour:
   ladderDescentChance: 0.4
   rb: {fileID: 0}
   horizontalDirection: -1
+  groundLayer: 0
+  playerLayer: 0
+  killZoneLayer: 0
   timeToExplode: 5
   explosionRadius: 2
+--- !u!95 &7428185396535777578
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209245728650688344}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7508ad5afa4aef845b1ac6bfab39bf98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
