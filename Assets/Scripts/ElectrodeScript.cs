@@ -1,79 +1,76 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ElectrodeScript : MonoBehaviour
 {
+    // --- Configuración Pública ---
+    [Header("Movement")]
+    public float rollSpeed = 3f;
+    [Range(0f, 1f)]
+    public float ladderDescentChance = 0.4f;
+
+    // --- Componentes y Estado ---
     private Rigidbody2D rb;
 
-    
-    public float speed = 3f;
-    
-    public float ladderDescentChance = 0.4f; // 40% de probabilidad de bajar
-
-    // Variables de control
+    [Tooltip("Dirección horizontal actual de rodadura (-1: Izquierda, 1: Derecha)")]
+    public float horizontalDirection = -1f; // Iniciar rodando hacia la izquierda
     private bool isRollingDownLadder = false;
 
-    // Variable NUEVA: Almacena la dirección horizontal de rodadura (-1 o 1)
-    private float horizontalDirection = -1f;
-
-    // Almacenamos el número de Layer del suelo para ignorarlo
+    // --- Capas y Constantes ---
     private int groundLayer;
+    private int playerLayer;
+    private int killZoneLayer;
+    private int inverterWallLayer;
+    private const float OVERLAP_CHECK_RADIUS = 0.5f;
+
+    // Colisionadores de suelo ignorados durante el descenso por escalera
+    private readonly List<Collider2D> ignoredGroundColliders = new List<Collider2D>();
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        // Obtener el ID de la capa "Ground" (debe existir en el editor de Unity)
+        InitializeLayers();
+    }
+
+    private void InitializeLayers()
+    {
         groundLayer = LayerMask.NameToLayer("Ground");
+        playerLayer = LayerMask.NameToLayer("Player");
+        killZoneLayer = LayerMask.NameToLayer("KillZone");
+        inverterWallLayer = LayerMask.NameToLayer("Wall");
+
     }
 
     private void Start()
     {
-        // Establecer la velocidad inicial usando la dirección guardada
-        //rb.linearVelocity = new Vector2(horizontalDirection * speed, 0f);
+        // Establecer la velocidad inicial de rodadura
+        rb.linearVelocity = new Vector2(horizontalDirection * rollSpeed, 0f);
     }
 
-    
-    private void FixedUpdate()
-    {
-       /* if (!isRollingDownLadder)
-        {
-            // Actualizar la dirección horizontal si la velocidad actual es muy baja 
-            // y no estamos rodando por una escalera.
-            if (Mathf.Abs(rb.linearVelocity.x) > 0.1f)
-            {
-                // Guarda la dirección actual de rodadura
-                horizontalDirection = Mathf.Sign(rb.linearVelocity.x);
-            }
 
-            // Si el barril ha dejado de rodar por fricción (aunque debería rebotar siempre)
-            if (Mathf.Abs(rb.linearVelocity.x) < 0.1f)
-            {
-                // Forzar la reanudación del movimiento
-                rb.linearVelocity = new Vector2(horizontalDirection * speed, rb.linearVelocity.y);
-            }
-        }*/
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // 1. Colisiones de Fin de Juego (mantener)
-        if (collision.gameObject.layer == LayerMask.NameToLayer("KillZone") ||
-            collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        GameObject collidedObject = collision.gameObject;
+        int collidedLayer = collidedObject.layer;
+
+        if (HandleDestructiveCollisions(collidedLayer, collidedObject))
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-            {
-                GameManager.Instance.HandlePlayerHit();
-            }
-            Destroy(gameObject);
-            
+            return;
         }
 
-        // 2. Lógica de inversión de dirección al golpear una pared (si el rebote no es 100%)
-        if (collision.gameObject.layer == groundLayer)
+        // 1. Manejar colisión con el suelo (Aterrizajes)
+        if (collidedLayer == groundLayer)
         {
-            // Invertimos la dirección de rodadura
-            horizontalDirection *= -1f;
-            // Forzamos la nueva velocidad para que el PhysicsMaterial no la frene
-           // rb.linearVelocity = new Vector2(horizontalDirection * speed, rb.linearVelocity.y);
+            // El barril aterrizó. Solo reanuda velocidad, no invierte dirección.
+            UpdateHorizontalVelocity();
+            return;
+        }
+
+        // 2. Manejar colisión con la pared inversora (con Bouncing)
+        if (collidedLayer == inverterWallLayer)
+        {
+            HandleInverterWallCollision(collision);
         }
     }
 
@@ -81,44 +78,163 @@ public class ElectrodeScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.HandlePlayerHit();
-            Destroy(gameObject);
-            
+            HandlePlayerHit();
         }
 
-        // Lógica de Descenso por Escalera
-        if (other.CompareTag("Ladder") && !isRollingDownLadder)
+        if (other.CompareTag("LadderDescend") && !isRollingDownLadder)
         {
-            if (Random.value < ladderDescentChance)
-            {
-                isRollingDownLadder = true;
-
-                // **PROBLEMA 2 SOLUCIONADO: Ignorar colisiones con el suelo**
-                // Hacemos que el Rigidbody del barril ignore temporalmente su propia capa
-                // con la capa Ground para que caiga por el hueco.
-                Physics2D.IgnoreLayerCollision(gameObject.layer, groundLayer, true);
-
-                // Centrar y detener movimiento horizontal (dejar que la gravedad haga el resto)
-                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-            }
+            TryStartLadderDescent();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Detectar si el barril ha pasado la escalera y ha caído en la siguiente plataforma.
-        if (other.CompareTag("Ladder") && isRollingDownLadder)
+        if (other.CompareTag("LadderDescend") && isRollingDownLadder)
         {
-            // El barril ha salido de la zona del Trigger.
-            isRollingDownLadder = false;
+            EndLadderDescent();
+        }
+    }
 
-            // **PROBLEMA 1 SOLUCIONADO: Reanudar la dirección anterior**
-            // Reanudar el movimiento horizontal usando la dirección recordada (horizontalDirection)
-            rb.linearVelocity = new Vector2(horizontalDirection * speed, rb.linearVelocity.y);
+    // --- Métodos de Lógica de Colisión y Destrucción ---
 
-            // **PROBLEMA 2 SOLUCIONADO: Restaurar colisiones con el suelo**
-            // Volver a habilitar la colisión con la capa Ground.
-            Physics2D.IgnoreLayerCollision(gameObject.layer, groundLayer, false);
+    private bool HandleDestructiveCollisions(int layer, GameObject obj)
+    {
+        if (layer == killZoneLayer || layer == playerLayer)
+        {
+            if (layer == playerLayer)
+            {
+                GameManager.Instance.HandlePlayerHit();
+            }
+            Destroy(gameObject);
+            return true;
+        }
+        return false;
+    }
+
+    private void HandlePlayerHit()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.HandlePlayerHit();
+        }
+        Destroy(gameObject);
+    }
+
+    private void HandleGroundCollision(GameObject collidedObject, Collision2D collision)
+    {
+        // 1. Obtener la normal de colisión.
+        // La normal es un vector perpendicular a la superficie de contacto.
+        Vector2 normal = collision.contacts[0].normal;
+        const float LATERAL_THRESHOLD = 0.3f;
+        // Si choca con un objeto con Tags que no deben invertir el movimiento
+        if (collidedObject.CompareTag("Finish") || collidedObject.CompareTag("Respawn"))
+        {
+            UpdateHorizontalVelocity();
+            return;
+        }
+
+        // 2. Comprobar si la colisión es lateral (choque de pared)
+        // Usamos un umbral (ej. 0.2f) para determinar si la colisión es horizontal.
+        // Si la componente Y de la normal es pequeña, la colisión es lateral.
+        // Mathf.Abs(normal.y) < 0.2f significa que la superficie de contacto es casi vertical.
+        if (Mathf.Abs(normal.y) < LATERAL_THRESHOLD)
+        {
+            // Choca con pared normal (Ground) -> Invertir dirección
+            horizontalDirection *= -1f;
+            UpdateHorizontalVelocity();
+        }
+        // Si no es una colisión lateral (es un aterrizaje), simplemente reanudamos la velocidad
+        // en caso de que la fricción la haya disminuido.
+        else
+        {
+            UpdateHorizontalVelocity();
+        }
+    }
+
+    private void HandleInverterWallCollision(Collision2D collision)
+    {
+        // Solo invertiremos la dirección si el golpe es claramente lateral.
+        // Esto evita que el rebote sutil en un borde active la inversión.
+        Vector2 normal = collision.contacts[0].normal;
+        const float LATERAL_THRESHOLD = 0.3f; // Ajusta este valor
+
+        if (Mathf.Abs(normal.y) < LATERAL_THRESHOLD)
+        {
+            // Choca con pared -> Invertir dirección
+            horizontalDirection *= -1f;
+        }
+
+        // El rebote de Unity (bouncing) ya habrá aplicado un impulso, 
+        // pero aseguramos la velocidad base.
+        UpdateHorizontalVelocity();
+    }
+
+
+    private void UpdateHorizontalVelocity()
+    {
+        rb.linearVelocity = new Vector2(horizontalDirection * rollSpeed, rb.linearVelocity.y);
+    }
+
+    // --- Lógica de Escalera ---
+
+    private void TryStartLadderDescent()
+    {
+        // Comprobar la probabilidad de bajar la escalera
+        if (Random.value < ladderDescentChance)
+        {
+            isRollingDownLadder = true;
+
+            // Deshabilitar colisión con el suelo y detener el movimiento horizontal
+            ToggleGroundCollisions(true);
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        }
+    }
+
+    private void EndLadderDescent()
+    {
+        isRollingDownLadder = false;
+
+        // 1. FORZAR la inversión de la dirección horizontal al terminar el descenso
+        horizontalDirection *= -1f;
+
+        // 2. Reanudar Colisiones con el Suelo
+        ToggleGroundCollisions(false);
+
+        // 3. Reanudar el movimiento horizontal con la NUEVA dirección
+        UpdateHorizontalVelocity();
+    }
+
+    private void ToggleGroundCollisions(bool ignore)
+    {
+        // Encontramos los colisionadores de suelo cercanos para ignorarlos o restaurarlos.
+        Collider2D barrelCollider = GetComponent<Collider2D>();
+
+        if (ignore)
+        {
+            ignoredGroundColliders.Clear();
+
+            // Buscar colisionadores de suelo en un radio pequeño alrededor del barril.
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, OVERLAP_CHECK_RADIUS);
+
+            foreach (Collider2D hitCollider in hitColliders)
+            {
+                if (hitCollider.gameObject.layer == groundLayer)
+                {
+                    Physics2D.IgnoreCollision(barrelCollider, hitCollider, true);
+                    ignoredGroundColliders.Add(hitCollider);
+                }
+            }
+        }
+        else // Restaurar colisiones
+        {
+            foreach (Collider2D ignoredCollider in ignoredGroundColliders)
+            {
+                if (ignoredCollider != null)
+                {
+                    Physics2D.IgnoreCollision(barrelCollider, ignoredCollider, false);
+                }
+            }
+            ignoredGroundColliders.Clear();
         }
     }
 }
