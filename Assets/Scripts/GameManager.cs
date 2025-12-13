@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-
-// Asegúrate de incluir el namespace para la interfaz de usuario si usas Image:
-// using UnityEngine.UI; 
-
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,42 +9,21 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
     public GameObject startPosition;
+    public GameObject gameOverUI;
 
+    private bool isDead = false;
 
-    
-    public int lifes = 5; // Vida total. Es mejor si es un número que se divide bien por 3 o 2
-                          // Se asume que 'lifes' representa la vida actual.
+    public int lifes = 3;
 
-    // --- NUEVAS VARIABLES PARA EL HUD ---
-
-    // Asignación de los Sprites de vida desde el Inspector
     public Sprite fullLifeSprite;
     public Sprite halfLifeSprite;
     public Sprite lowLifeSprite;
 
-    // Referencia al componente SpriteRenderer del objeto HUD
     public SpriteRenderer hudSpriteRenderer;
-    // Si usas UnityEngine.UI.Image, cambia el tipo a 'public Image hudImage;'
 
-    // --- NUEVAS VARIABLES PARA EL HUD ---
-
-    // La vida máxima para calcular los umbrales
     private int maxLifes;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        player.transform.position = startPosition.transform.position;
-        CurrentSceneName = SceneManager.GetActiveScene().name;
-
-        // Guardar la vida máxima al inicio
-        maxLifes = lifes;
-
-        // Inicializar el HUD al estado de vida completo
-        UpdateHUDVisual();
-    }
-
-    private void Awake()
+    void Awake()
     {
         if (Instance == null)
         {
@@ -59,71 +35,80 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Reset()
+    void Start()
     {
-        SceneManager.LoadScene(CurrentSceneName);
-        lifes = maxLifes; // Usar maxLifes para restablecer
+        if (player != null && startPosition != null)
+        {
+            player.transform.position = startPosition.transform.position;
+        }
+
+        CurrentSceneName = SceneManager.GetActiveScene().name;
+        maxLifes = lifes;
+
+        UpdateHUDVisual();
+
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(false);
+        }
     }
 
-    // --- NUEVO MÉTODO PARA ACTUALIZAR EL SPRITE DEL HUD ---
+    public void LoadCurrentScene()
+    {
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(false);
+        }
+
+        lifes = maxLifes;
+        isDead = false;
+
+        SceneManager.LoadScene(CurrentSceneName);
+    }
+
     private void UpdateHUDVisual()
     {
-        // Calcular los umbrales de vida (por ejemplo, Mitad = 66%, Low = 33%)
-        // Asumiendo que la vida se divide en tercios para 3 estados:
         float lowThreshold = maxLifes / 3f;
         float halfThreshold = 2 * (maxLifes / 3f);
-
-        // Ejemplo con 5 vidas: lowThreshold ≈ 1.66, halfThreshold ≈ 3.33
 
         Sprite newSprite = null;
 
         if (lifes > halfThreshold)
         {
-            // Estado FULL (Más de 2/3 de vida)
             newSprite = fullLifeSprite;
         }
         else if (lifes > lowThreshold)
         {
-            // Estado MITAD (Entre 1/3 y 2/3 de vida)
             newSprite = halfLifeSprite;
         }
         else
         {
-            // Estado LOW (1/3 de vida o menos)
             newSprite = lowLifeSprite;
         }
 
-        // Aplicar el nuevo sprite si la referencia al SpriteRenderer es válida
         if (hudSpriteRenderer != null && newSprite != null)
         {
             hudSpriteRenderer.sprite = newSprite;
         }
-        // Si usas Image:
-        // if (hudImage != null && newSprite != null)
-        // {
-        //     hudImage.sprite = newSprite;
-        // }
     }
-    // --- FIN DEL NUEVO MÉTODO ---
-
 
     public void HandlePlayerHit()
     {
+        if (isDead) return;
 
         lifes--;
 
-        // Llamar a la actualización del HUD inmediatamente después de reducir la vida
         UpdateHUDVisual();
 
         if (lifes > 0)
         {
-
             restartPlayer();
         }
         else
         {
-
-            Reset();
+            isDead = true;
+            // Cuando la vida es 0, se llama al método GameOver
+            GameOver();
         }
     }
 
@@ -132,10 +117,38 @@ public class GameManager : MonoBehaviour
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = Vector2.zero; // Corregido a 'velocity' en lugar de 'linearVelocity'
+            rb.linearVelocity = Vector2.zero;
         }
+
         player.transform.position = startPosition.transform.position;
     }
 
+    public void GameOver()
+    {
+        Time.timeScale = 0f;
 
+        if (gameOverUI != null)
+        {
+            // Esta línea activa tu Canvas de Game Over
+            gameOverUI.SetActive(true);
+        }
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        LoadCurrentScene();
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Saliendo del juego...");
+        Application.Quit();
+    }
 }

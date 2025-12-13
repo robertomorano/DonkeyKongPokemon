@@ -2146,7 +2146,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2726,6 +2726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1714777994}
   startPosition: {fileID: 177706150}
+  gameOverUI: {fileID: 0}
   lifes: 3
   fullLifeSprite: {fileID: -3335809461911554872, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
   halfLifeSprite: {fileID: -4352121681545738249, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
