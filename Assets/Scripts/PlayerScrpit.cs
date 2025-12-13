@@ -17,6 +17,13 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform spriteTransform;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip climbingSoundClip;
+    [Tooltip("Volumen de reproducción del sonido de escalada (0.0 a 1.0).")]
+    [Range(0f, 1f)]
+    public float climbingVolume = 0.7f; // Volumen por defecto
+
     private Rigidbody2D rb;
     private Animator animator;
     private bool grounded;
@@ -24,6 +31,10 @@ public class Player : MonoBehaviour
     private bool nearLadder;
     private GameObject currentLadder;
     private Collider2D playerCollider;
+
+    // Variables de control de audio y movimiento vertical
+    private float verticalInput;
+    private bool isPlayingClimbingSound = false;
 
     private bool facingRight = true;
 
@@ -54,6 +65,23 @@ public class Player : MonoBehaviour
 
         if (animator == null)
             Debug.LogWarning("¡Animator no encontrado!");
+
+        // Inicialización y configuración de AudioSource
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
+        }
+
+        if (audioSource != null && climbingSoundClip != null)
+        {
+            audioSource.clip = climbingSoundClip;
+            audioSource.loop = true; // El sonido de escalada debe repetirse
+            // El volumen inicial se establecerá en la función de control
+        }
     }
 
     void Update()
@@ -67,11 +95,17 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         MoverJugador();
+        ControlarSonidoEscalada();
     }
 
     private void LeerInput()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        // Capturamos el input vertical aquí
+        verticalInput = 0f;
+        if (Input.GetKey(KeyCode.W)) verticalInput = 1f;
+        else if (Input.GetKey(KeyCode.S)) verticalInput = -1f;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -95,11 +129,7 @@ public class Player : MonoBehaviour
     {
         if (climbing && currentLadder != null)
         {
-            float verticalInput = 0f;
-            if (Input.GetKey(KeyCode.W)) verticalInput = 1f;
-            else if (Input.GetKey(KeyCode.S)) verticalInput = -1f;
-
-            // Movimiento en la escalera (puede quedarse quieto si no presiona nada)
+            // Movimiento en la escalera
             rb.linearVelocity = new Vector2(horizontal * moveSpeed, verticalInput * climbSpeed);
             rb.gravityScale = 0f;
 
@@ -123,6 +153,27 @@ public class Player : MonoBehaviour
         }
 
         jumpPressed = false;
+    }
+
+    // Función para controlar la reproducción del sonido
+    private void ControlarSonidoEscalada()
+    {
+        if (audioSource == null || climbingSoundClip == null) return;
+
+        // Solo reproducir si está escalando Y hay movimiento vertical
+        bool shouldPlay = climbing && Mathf.Abs(verticalInput) > 0.01f;
+
+        if (shouldPlay && !isPlayingClimbingSound)
+        {
+            audioSource.volume = climbingVolume; // Establecer el volumen
+            audioSource.Play();
+            isPlayingClimbingSound = true;
+        }
+        else if (!shouldPlay && isPlayingClimbingSound)
+        {
+            audioSource.Stop();
+            isPlayingClimbingSound = false;
+        }
     }
 
     // Método para ignorar/reactivar colisiones con el suelo
@@ -169,8 +220,11 @@ public class Player : MonoBehaviour
 
         bool isRunning = horizontal != 0f && grounded;
 
+        // Solo animar la escalada si se está moviendo verticalmente
+        bool isClimbingAnimated = climbing && Mathf.Abs(verticalInput) > 0.01f;
+
         animator.SetBool("Running", isRunning);
-        animator.SetBool("Climbing", climbing);
+        animator.SetBool("Climbing", isClimbingAnimated);
     }
 
     // Detectar escaleras usando trigger y GameObject
@@ -216,6 +270,13 @@ public class Player : MonoBehaviour
 
             // Asegurar que las colisiones se reactiven al salir
             IgnoreGroundCollision(false);
+
+            // Detener el sonido al salir del trigger
+            if (isPlayingClimbingSound)
+            {
+                audioSource.Stop();
+                isPlayingClimbingSound = false;
+            }
         }
     }
 
@@ -230,9 +291,10 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-     if(collision.gameObject.layer == LayerMask.NameToLayer("KillZone"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("KillZone"))
         {
-            GameManager.Instance.HandlePlayerHit();
+            // Asegúrate de que GameManager.Instance esté definido o elimina esta línea si no lo usas
+            // GameManager.Instance.HandlePlayerHit(); 
 
         }
     }

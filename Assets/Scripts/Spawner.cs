@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
     [Header("Components & Animation")]
     public Animator animator;
 
+    private AudioSource audioSource;
+
     [Header("Barrel Prefabs")]
     [Tooltip("The standard barrel (higher chance of spawning).")]
     public GameObject normalBarrelPrefab;
@@ -23,12 +25,24 @@ public class Spawner : MonoBehaviour
     public float minTime = 1f;
     public float maxTime = 4f;
 
+    [Header("Audio")]
+    [Tooltip("The sound played when a barrel is launched.")]
+    public AudioClip launchSound;
+
     void Start()
     {
         // Ensure the Animator component is found if not assigned in the Inspector
         if (animator == null)
         {
             animator = GetComponent<Animator>();
+        }
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Añadir el AudioSource si no existe (opcional, mejor añadirlo manualmente)
+            // audioSource = gameObject.AddComponent<AudioSource>();
+            Debug.LogWarning("AudioSource component missing on Spawner. Audio will not play.");
         }
 
         // Start the recurring spawn sequence
@@ -79,6 +93,11 @@ public class Spawner : MonoBehaviour
             nextSpawnTime = Random.Range(minTime, maxTime);
             Invoke(nameof(Spawn), nextSpawnTime);
             return;
+        }
+
+        if (audioSource != null && launchSound != null)
+        {
+            audioSource.PlayOneShot(launchSound);
         }
 
         // 1. Trigger the launch animation
