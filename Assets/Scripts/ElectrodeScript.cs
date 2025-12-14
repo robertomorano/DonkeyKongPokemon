@@ -83,6 +83,7 @@ public class ElectrodeScript : VoltorbScript
             }
         }
         // Si ya está explotando, no hace nada (no vuelve a llamar a la base).
+        Invoke(nameof(FinishExplosion), 7.0f);
     }
 
     // Método que maneja la lógica de daño/radio
