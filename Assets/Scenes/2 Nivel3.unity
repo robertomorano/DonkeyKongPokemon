@@ -1080,6 +1080,8 @@ Transform:
   m_GameObject: {fileID: 542637173}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.17, y: 2.01, z: -0.27422068}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -27067,13 +27069,8 @@ MonoBehaviour:
   player: {fileID: 2124444583}
   startPosition: {fileID: 98107044}
   gameOverUI: {fileID: 1718116909}
-<<<<<<< Updated upstream
-  gameOverAudioSource: {fileID: 0}
-  gameOverSoundClip: {fileID: 0}
-=======
   gameOverAudioSource: {fileID: 1751287189}
   gameOverSoundClip: {fileID: 8300000, guid: 75154917250c9bd4bab92e501bd80a6b, type: 3}
->>>>>>> Stashed changes
   gameOverVolume: 1
   fullLifeSprite: {fileID: -3335809461911554872, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
   halfLifeSprite: {fileID: -4352121681545738249, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
@@ -27908,7 +27905,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-<<<<<<< Updated upstream
 --- !u!1001 &5917034368880725412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27978,8 +27974,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ee11668986fc1d42a6900699d3c3313, type: 3}
-=======
->>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
