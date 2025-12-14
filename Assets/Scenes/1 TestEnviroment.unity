@@ -273,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 1117789739}
     - target: {fileID: -60146638824076109, guid: 8a862d8fbcfde1845b4cdccb3f392b6c, type: 3}
       propertyPath: jumpStrength
-      value: 1.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -60146638824076109, guid: 8a862d8fbcfde1845b4cdccb3f392b6c, type: 3}
       propertyPath: jumpSoundClip
