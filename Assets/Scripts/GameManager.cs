@@ -33,8 +33,6 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            // IMPORTANTE: Para que el GameManager persista entre escenas si fuera necesario
-            // DontDestroyOnLoad(gameObject); 
         }
         else
         {
@@ -55,8 +53,11 @@ public class GameManager : MonoBehaviour
         }
 
         // Aseguramos que el audioSource de Game Over no se buclee.
-        gameOverAudioSource.loop = false;
-        gameOverAudioSource.playOnAwake = false;
+        if (gameOverAudioSource != null)
+        {
+            gameOverAudioSource.loop = false;
+            gameOverAudioSource.playOnAwake = false;
+        }
 
         if (player != null && startPosition != null)
         {
@@ -75,10 +76,14 @@ public class GameManager : MonoBehaviour
 
         // Restaurar volumen al inicio del juego
         AudioListener.volume = 1f;
+        Time.timeScale = 1f; // Asegurar que el tiempo esté corriendo al inicio
     }
 
     public void LoadCurrentScene()
     {
+        // Si hay alguna invocación pendiente de Game Over, la cancelamos
+        CancelInvoke(nameof(ShowGameOverUI));
+
         if (gameOverUI != null)
         {
             gameOverUI.SetActive(false);
@@ -87,11 +92,14 @@ public class GameManager : MonoBehaviour
         lifes = maxLifes;
         isDead = false;
 
-        // Restaurar volumen antes de cargar
+        // Restaurar volumen y tiempo
         AudioListener.volume = 1f;
+        Time.timeScale = 1f;
 
         SceneManager.LoadScene(CurrentSceneName);
     }
+
+    // (El resto de los métodos de HUD y manejo de golpes se mantienen iguales)
 
     private void UpdateHUDVisual()
     {
@@ -134,7 +142,6 @@ public class GameManager : MonoBehaviour
         else
         {
             isDead = true;
-            // Cuando la vida es 0, se llama al método GameOver
             GameOver();
         }
     }
@@ -144,38 +151,52 @@ public class GameManager : MonoBehaviour
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            // Usar 'velocity' en lugar de 'linearVelocity' es más estándar.
             rb.linearVelocity = Vector2.zero;
         }
 
         player.transform.position = startPosition.transform.position;
     }
 
+
+    // ******************************************************
+    // >>> LÓGICA DE GAME OVER CORREGIDA CON RETRASO <<<
+    // ******************************************************
     public void GameOver()
+    {
+        // 1. Mutear TODO el sonido del juego INMEDIATAMENTE
+        AudioListener.volume = 0f;
+
+        // 2. Reproducir el sonido de Game Over INMEDIATAMENTE
+        if (gameOverAudioSource != null && gameOverSoundClip != null)
+        {
+            gameOverAudioSource.PlayOneShot(gameOverSoundClip, gameOverVolume);
+            Debug.Log("Sonido de Game Over disparado.");
+        }
+
+        // 3. Retrasar la congelación del tiempo y la aparición de la UI.
+        // Damos 0.1 segundos (unos 6 frames) para que el motor de audio se inicie antes de congelar el juego.
+        Invoke(nameof(ShowGameOverUI), 0.1f);
+    }
+
+    private void ShowGameOverUI()
     {
         // 1. Congelar el juego
         Time.timeScale = 0f;
 
-        // 2. Mutear TODOS los sonidos del juego (música, efectos, etc.)
-        AudioListener.volume = 0f;
-
-        // 3. Reproducir el sonido de Game Over (debe ignorar el AudioListener.volume = 0f)
-        if (gameOverAudioSource != null && gameOverSoundClip != null)
-        {
-            // Nota importante: Si usas el Audio Mixer, esta fuente debe estar en un grupo no muteado.
-            // Si NO usas Audio Mixer, el AudioSource DEBE tener la opción "Ignore Listener Volume" marcada en el Inspector.
-            gameOverAudioSource.PlayOneShot(gameOverSoundClip, gameOverVolume);
-        }
-
-        // 4. Mostrar la pantalla de Game Over
+        // 2. Mostrar la pantalla de Game Over
         if (gameOverUI != null)
         {
             gameOverUI.SetActive(true);
         }
     }
+    // ******************************************************
+
 
     public void RestartGame()
     {
+        // Cancelamos la invocación si el jugador hace clic rápido
+        CancelInvoke(nameof(ShowGameOverUI));
+
         // Restaurar volumen y tiempo
         Time.timeScale = 1f;
         AudioListener.volume = 1f;
