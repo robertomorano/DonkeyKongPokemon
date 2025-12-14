@@ -15,14 +15,21 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundRadius = 0.18f;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Transform spriteTransform;
+    [SerializeField] private Transform spriteTransform; // ¡Esta referencia se mantiene!
 
     [Header("Audio")]
-    public AudioSource audioSource;
+    public AudioSource loopAudioSource;
+    public AudioSource oneShotAudioSource;
     public AudioClip climbingSoundClip;
-    [Tooltip("Volumen de reproducción del sonido de escalada (0.0 a 1.0).")]
-    [Range(0f, 1f)]
-    public float climbingVolume = 0.7f; // Volumen por defecto
+    [Range(0f, 1f)] public float climbingVolume = 0.7f;
+    public AudioClip jumpSoundClip;
+    [Range(0f, 1f)] public float jumpVolume = 1.0f;
+    public AudioClip runningSoundClip;
+    [Range(0f, 1f)] public float runningVolume = 0.5f;
+
+    [Header("Martillo")]
+    public float attackRange = 1.5f;   // Alcance del ataque del martillo
+    public float attackCooldown = 0.5f; // Frecuencia con la que se puede golpear
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -31,57 +38,79 @@ public class Player : MonoBehaviour
     private bool nearLadder;
     private GameObject currentLadder;
     private Collider2D playerCollider;
-
-    // Variables de control de audio y movimiento vertical
     private float verticalInput;
     private bool isPlayingClimbingSound = false;
-
+    private bool isPlayingRunningSound = false;
     private bool facingRight = true;
+
+    private int barrelLayer;
+    private bool hasHammer = false;
+    private float nextAttackTime = 0f;
+    private bool isAttacking = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = gravityScale;
 
-        // Obtener el collider del jugador
         playerCollider = GetComponent<Collider2D>();
         if (playerCollider == null)
         {
             Debug.LogError("¡No se encontró Collider2D en el jugador!");
         }
 
+        // --- LÓGICA RESTAURADA DEL SPRITE RENDERER/ANIMATOR ---
         if (spriteTransform == null)
         {
             SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
             if (sr != null)
-                spriteTransform = sr.transform;
-        }
-
-        if (spriteTransform != null)
-            animator = spriteTransform.GetComponent<Animator>();
-
-        if (animator == null)
-            animator = GetComponent<Animator>();
-
-        if (animator == null)
-            Debug.LogWarning("¡Animator no encontrado!");
-
-        // Inicialización y configuración de AudioSource
-        if (audioSource == null)
-        {
-            audioSource = GetComponent<AudioSource>();
-            if (audioSource == null)
             {
-                audioSource = gameObject.AddComponent<AudioSource>();
+                spriteTransform = sr.transform;
             }
         }
 
-        if (audioSource != null && climbingSoundClip != null)
+        if (spriteTransform != null)
         {
-            audioSource.clip = climbingSoundClip;
-            audioSource.loop = true; // El sonido de escalada debe repetirse
-            // El volumen inicial se establecerá en la función de control
+            animator = spriteTransform.GetComponent<Animator>();
         }
+
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
+
+        if (animator == null)
+        {
+            Debug.LogWarning("¡Animator no encontrado!");
+        }
+        // --- FIN LÓGICA RESTAURADA ---
+
+        barrelLayer = LayerMask.NameToLayer("Barrel");
+        InitializeAudioSources();
+    }
+
+    private void InitializeAudioSources()
+    {
+        AudioSource[] sources = GetComponents<AudioSource>();
+
+        if (sources.Length == 0)
+        {
+            loopAudioSource = gameObject.AddComponent<AudioSource>();
+            oneShotAudioSource = gameObject.AddComponent<AudioSource>();
+        }
+        else if (sources.Length == 1)
+        {
+            loopAudioSource = sources[0];
+            oneShotAudioSource = gameObject.AddComponent<AudioSource>();
+        }
+        else
+        {
+            loopAudioSource = sources[0];
+            oneShotAudioSource = sources[1];
+        }
+
+        if (loopAudioSource == null) loopAudioSource = sources.Length > 0 ? sources[0] : gameObject.AddComponent<AudioSource>();
+        if (oneShotAudioSource == null) oneShotAudioSource = sources.Length > 1 ? sources[1] : gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -90,19 +119,23 @@ public class Player : MonoBehaviour
         DetectarSuelo();
         FlipSprite();
         ActualizarAnimator();
+
+        if (hasHammer && !climbing && Input.GetMouseButtonDown(0) && Time.time >= nextAttackTime)
+        {
+            PerformHammerAttack();
+        }
     }
 
     private void FixedUpdate()
     {
         MoverJugador();
         ControlarSonidoEscalada();
+        ControlarSonidoCarrera();
     }
 
     private void LeerInput()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-
-        // Capturamos el input vertical aquí
         verticalInput = 0f;
         if (Input.GetKey(KeyCode.W)) verticalInput = 1f;
         else if (Input.GetKey(KeyCode.S)) verticalInput = -1f;
@@ -110,8 +143,65 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jumpPressed = true;
+            PlayJumpSound();
         }
     }
+
+    // --- Lógica del Martillo ---
+
+    public void ActivateHammer(float duration)
+    {
+        if (hasHammer)
+        {
+            CancelInvoke(nameof(DeactivateHammer));
+        }
+
+        hasHammer = true;
+        Invoke(nameof(DeactivateHammer), duration);
+        Debug.Log("Martillo Recogido. Tiempo restante: " + duration + "s");
+    }
+
+    private void DeactivateHammer()
+    {
+        hasHammer = false;
+        isAttacking = false;
+        Debug.Log("Martillo Desactivado: El tiempo ha terminado.");
+    }
+
+    private void PerformHammerAttack()
+    {
+        if (!hasHammer) return;
+
+        nextAttackTime = Time.time + attackCooldown;
+        isAttacking = true;
+
+        Vector3 attackOrigin = transform.position;
+        attackOrigin += (facingRight ? Vector3.right : Vector3.left) * (attackRange / 2f);
+
+        int barrelLayerMask = 1 << barrelLayer;
+
+        Collider2D[] hitObjects = Physics2D.OverlapCircleAll(attackOrigin, attackRange / 2f, barrelLayerMask);
+
+        foreach (Collider2D hit in hitObjects)
+        {
+            if (hit.gameObject.layer == barrelLayer)
+            {
+                Debug.Log("¡Martillo golpeó y destruyó a: " + hit.name + "!");
+                Destroy(hit.gameObject);
+            }
+        }
+
+        Debug.DrawRay(attackOrigin, facingRight ? Vector2.right * (attackRange / 2f) : Vector2.left * (attackRange / 2f), Color.red, attackCooldown);
+
+        Invoke(nameof(ResetAttackState), 0.1f);
+    }
+
+    private void ResetAttackState()
+    {
+        isAttacking = false;
+    }
+
+    // --- Lógica de Movimiento y Audio ---
 
     private void DetectarSuelo()
     {
@@ -129,21 +219,14 @@ public class Player : MonoBehaviour
     {
         if (climbing && currentLadder != null)
         {
-            // Movimiento en la escalera
             rb.linearVelocity = new Vector2(horizontal * moveSpeed, verticalInput * climbSpeed);
             rb.gravityScale = 0f;
-
-            // Desactivar colisiones con el suelo mientras escala
             IgnoreGroundCollision(true);
-
-            // No permitir salto normal mientras escala
             jumpPressed = false;
             return;
         }
 
-        // Reactivar colisiones con el suelo cuando NO está escalando
         IgnoreGroundCollision(false);
-
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
         rb.gravityScale = gravityScale;
 
@@ -155,36 +238,85 @@ public class Player : MonoBehaviour
         jumpPressed = false;
     }
 
-    // Función para controlar la reproducción del sonido
-    private void ControlarSonidoEscalada()
+    private void PlayJumpSound()
     {
-        if (audioSource == null || climbingSoundClip == null) return;
-
-        // Solo reproducir si está escalando Y hay movimiento vertical
-        bool shouldPlay = climbing && Mathf.Abs(verticalInput) > 0.01f;
-
-        if (shouldPlay && !isPlayingClimbingSound)
+        if (oneShotAudioSource != null && jumpSoundClip != null)
         {
-            audioSource.volume = climbingVolume; // Establecer el volumen
-            audioSource.Play();
-            isPlayingClimbingSound = true;
-        }
-        else if (!shouldPlay && isPlayingClimbingSound)
-        {
-            audioSource.Stop();
-            isPlayingClimbingSound = false;
+            oneShotAudioSource.PlayOneShot(jumpSoundClip, jumpVolume);
         }
     }
 
-    // Método para ignorar/reactivar colisiones con el suelo
+    private void ControlarSonidoEscalada()
+    {
+        if (loopAudioSource == null || climbingSoundClip == null) return;
+
+        bool shouldPlay = climbing && Mathf.Abs(verticalInput) > 0.01f;
+
+        if (shouldPlay)
+        {
+            if (!isPlayingClimbingSound || loopAudioSource.clip != climbingSoundClip)
+            {
+                if (isPlayingRunningSound) isPlayingRunningSound = false;
+
+                loopAudioSource.clip = climbingSoundClip;
+                loopAudioSource.loop = true;
+                loopAudioSource.volume = climbingVolume;
+                loopAudioSource.Play();
+                isPlayingClimbingSound = true;
+            }
+        }
+        else
+        {
+            if (isPlayingClimbingSound)
+            {
+                if (loopAudioSource.clip == climbingSoundClip)
+                {
+                    loopAudioSource.Stop();
+                }
+                isPlayingClimbingSound = false;
+            }
+        }
+    }
+
+    private void ControlarSonidoCarrera()
+    {
+        if (loopAudioSource == null || runningSoundClip == null) return;
+
+        bool shouldPlay = grounded && Mathf.Abs(horizontal) > 0.01f && !climbing;
+
+        if (shouldPlay)
+        {
+            if (!isPlayingRunningSound || loopAudioSource.clip != runningSoundClip)
+            {
+                if (isPlayingClimbingSound) return;
+
+                loopAudioSource.clip = runningSoundClip;
+                loopAudioSource.loop = true;
+                loopAudioSource.volume = runningVolume;
+                loopAudioSource.Play();
+                isPlayingRunningSound = true;
+            }
+        }
+        else
+        {
+            if (isPlayingRunningSound)
+            {
+                if (loopAudioSource.clip == runningSoundClip)
+                {
+                    loopAudioSource.Stop();
+                }
+                isPlayingRunningSound = false;
+            }
+        }
+    }
+
     private void IgnoreGroundCollision(bool ignore)
     {
         if (playerCollider == null) return;
 
-        // Obtener todos los colliders del layer de suelo
         Collider2D[] groundColliders = Physics2D.OverlapCircleAll(
             transform.position,
-            10f, // Radio de búsqueda amplio
+            10f,
             groundLayer
         );
 
@@ -220,22 +352,20 @@ public class Player : MonoBehaviour
 
         bool isRunning = horizontal != 0f && grounded;
 
-        // Solo animar la escalada si se está moviendo verticalmente
         bool isClimbingAnimated = climbing && Mathf.Abs(verticalInput) > 0.01f;
 
         animator.SetBool("Running", isRunning);
         animator.SetBool("Climbing", isClimbingAnimated);
+        // Opcional: animator.SetBool("HasHammer", hasHammer);
     }
 
-    // Detectar escaleras usando trigger y GameObject
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Ladder"))
         {
             nearLadder = true;
             currentLadder = collision.gameObject;
-            Debug.Log("Cerca de una escalera");
-            climbing = false; // se activará al presionar W/S
+            climbing = false;
         }
     }
 
@@ -245,13 +375,12 @@ public class Player : MonoBehaviour
         {
             currentLadder = collision.gameObject;
 
-            // Activar climbing al presionar W o S por primera vez
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
             {
                 climbing = true;
+                if (isPlayingRunningSound) isPlayingRunningSound = false;
             }
 
-            // Desactivar climbing solo si presiona Space (saltar) para salir de la escalera
             if (Input.GetKeyDown(KeyCode.Space) && climbing)
             {
                 climbing = false;
@@ -265,16 +394,16 @@ public class Player : MonoBehaviour
         {
             nearLadder = false;
             climbing = false;
-            Debug.Log("Fuera de la escalera");
             currentLadder = null;
 
-            // Asegurar que las colisiones se reactiven al salir
             IgnoreGroundCollision(false);
 
-            // Detener el sonido al salir del trigger
             if (isPlayingClimbingSound)
             {
-                audioSource.Stop();
+                if (loopAudioSource.clip == climbingSoundClip)
+                {
+                    loopAudioSource.Stop();
+                }
                 isPlayingClimbingSound = false;
             }
         }
@@ -287,15 +416,36 @@ public class Player : MonoBehaviour
             Gizmos.color = grounded ? Color.green : Color.red;
             Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         }
+
+        // Dibuja el área de ataque del martillo
+        if (hasHammer)
+        {
+            Vector3 attackOrigin = transform.position;
+            attackOrigin += (facingRight ? Vector3.right : Vector3.left) * (attackRange / 2f);
+
+            Gizmos.color = isAttacking ? Color.yellow : Color.red;
+            Gizmos.DrawWireSphere(attackOrigin, attackRange / 2f);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("KillZone"))
-        {
-            // Asegúrate de que GameManager.Instance esté definido o elimina esta línea si no lo usas
-            // GameManager.Instance.HandlePlayerHit(); 
+        int collidedLayer = collision.gameObject.layer;
+        int killZoneLayer = LayerMask.NameToLayer("KillZone");
 
+        if (collidedLayer == killZoneLayer || collidedLayer == barrelLayer)
+        {
+            // Invulnerabilidad: si tiene martillo y choca con un Barrel, no hay daño.
+            if (hasHammer && collidedLayer == barrelLayer)
+            {
+                return;
+            }
+
+            // Recibe daño si choca con KillZone o Barrel sin martillo
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.HandlePlayerHit();
+            }
         }
     }
 }

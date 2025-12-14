@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class RodScript : MonoBehaviour
 {
+    // Duración del martillo una vez recogido
     [SerializeField] private float duration = 5f;
 
     private bool rotate = true;
@@ -17,7 +18,7 @@ public class RodScript : MonoBehaviour
     {
         startPosition = transform.position;
 
-        // Configurar collider como trigger
+        // Configurar collider como trigger para la recogida
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)
         {
@@ -31,13 +32,13 @@ public class RodScript : MonoBehaviour
 
     void Update()
     {
-        // Rotación
+        // Rotación visual
         if (rotate)
         {
             transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
         }
 
-        // Rebote
+        // Rebote visual (usando la función Sinusoidal)
         if (bounce)
         {
             float newY = startPosition.y + Mathf.Sin(Time.time * bounceSpeed) * bounceHeight;
@@ -54,10 +55,12 @@ public class RodScript : MonoBehaviour
 
             if (player != null)
             {
+                // ** Llama al método del jugador para activar el martillo **
+                player.ActivateHammer(duration);
 
-                Debug.Log("¡Power-Up recogido!");
+                Debug.Log("¡Martillo recogido! Duración: " + duration + "s");
 
-                // Destruir el objeto
+                // Destruir el objeto (el ítem del martillo)
                 Destroy(gameObject);
             }
         }

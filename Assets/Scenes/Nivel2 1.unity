@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60019b2c269e60a4899ad43cead85efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 5
+  duration: 20
 --- !u!61 &743234661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2754,6 +2754,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1714777994}
+  startPosition: {fileID: 0}
+  gameOverUI: {fileID: 0}
   lifes: 3
   fullLifeSprite: {fileID: -3335809461911554872, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
   halfLifeSprite: {fileID: -4352121681545738249, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
