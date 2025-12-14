@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
-  jumpStrength: 1.5
+  jumpStrength: 7
   gravityScale: 3
   climbSpeed: 1.5
   groundCheck: {fileID: 0}

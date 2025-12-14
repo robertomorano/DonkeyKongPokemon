@@ -6,7 +6,7 @@ public class StartManager : MonoBehaviour
 
     public void OnStartClick()
     {
-        SceneManager.LoadScene("testMap");
+        SceneManager.LoadScene("Fase1");
     }
 
     public void OnExitClick()
