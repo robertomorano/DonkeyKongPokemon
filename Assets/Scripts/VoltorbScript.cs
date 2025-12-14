@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class VoltorbScript : MonoBehaviour
 {
-    // --- Configuración Pública ---
+    // --- Configuraciï¿½n Pï¿½blica ---
     [Header("Movement")]
     public float rollSpeed = 3f;
     [Range(0f, 1f)]
@@ -12,40 +12,44 @@ public class VoltorbScript : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip rollingSoundClip;
-    [Tooltip("Distancia hacia abajo para comprobar si está tocando el suelo.")]
-    public float groundCheckDistance = 0.6f; // Ajusta este valor según el tamaño del colisionador
+    [Tooltip("Distancia hacia abajo para comprobar si estï¿½ tocando el suelo.")]
+    public float groundCheckDistance = 0.6f; // Ajusta este valor segï¿½n el tamaï¿½o del colisionador
 
     // --- Componentes y Estado ---
     public Rigidbody2D rb;
 
-    [Tooltip("Dirección horizontal actual de rodadura (-1: Izquierda, 1: Derecha)")]
+    [Tooltip("Direcciï¿½n horizontal actual de rodadura (-1: Izquierda, 1: Derecha)")]
     public float horizontalDirection = -1f; // Iniciar rodando hacia la izquierda
     private bool isRollingDownLadder = false;
 
-    // Nuevo estado para la lógica de sonido
+    // Nuevo estado para la lï¿½gica de sonido
     private bool isGrounded = false;
 
     // --- Capas y Constantes ---
-    private int groundLayer;
-    private int playerLayer;
-    private int killZoneLayer;
+    public int groundLayer;
+    public int playerLayer;
+    public int killZoneLayer;
+
+
+    
+    
     private int inverterWallLayer;
     private const float OVERLAP_CHECK_RADIUS = 0.5f;
 
     // Colisionadores de suelo ignorados durante el descenso por escalera
     private readonly List<Collider2D> ignoredGroundColliders = new List<Collider2D>();
 
-    private void Awake()
+    public void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         InitializeLayers();
-        // Asegurarse de que el AudioSource esté configurado si no está asignado en el Inspector
+        // Asegurarse de que el AudioSource estï¿½ configurado si no estï¿½ asignado en el Inspector
         if (audioSource == null)
         {
             audioSource = GetComponent<AudioSource>();
             if (audioSource == null)
             {
-                // Si no hay AudioSource, añadir uno
+                // Si no hay AudioSource, aï¿½adir uno
                 audioSource = gameObject.AddComponent<AudioSource>();
             }
         }
@@ -70,7 +74,7 @@ public class VoltorbScript : MonoBehaviour
         {
             audioSource.clip = rollingSoundClip;
             audioSource.loop = true; // El sonido debe repetirse mientras rueda
-            // No reproducir al inicio, se hará en FixedUpdate
+            // No reproducir al inicio, se harï¿½ en FixedUpdate
         }
     }
 
@@ -79,10 +83,10 @@ public class VoltorbScript : MonoBehaviour
         // 1. Comprobar el estado de estar en el suelo
         CheckIfGrounded();
 
-        // 2. Actualizar la reproducción del sonido de rodadura
+        // 2. Actualizar la reproducciï¿½n del sonido de rodadura
         UpdateRollingSound();
 
-        // Aseguramos que la velocidad horizontal sea correcta si no está en descenso por escalera
+        // Aseguramos que la velocidad horizontal sea correcta si no estï¿½ en descenso por escalera
         if (!isRollingDownLadder)
         {
             UpdateHorizontalVelocity();
@@ -90,27 +94,27 @@ public class VoltorbScript : MonoBehaviour
     }
 
 
-    // --- Lógica de Suelo y Sonido ---
+    // --- Lï¿½gica de Suelo y Sonido ---
 
     private void CheckIfGrounded()
     {
-        // Usar un Raycast o BoxCast pequeño hacia abajo para verificar si está tocando el suelo.
-        // Se usa el bitwise OR (|) para crear una máscara de capa solo con la capa "Ground".
+        // Usar un Raycast o BoxCast pequeï¿½o hacia abajo para verificar si estï¿½ tocando el suelo.
+        // Se usa el bitwise OR (|) para crear una mï¿½scara de capa solo con la capa "Ground".
         int layerMask = 1 << groundLayer;
 
         // Se usa Physics2D.Raycast: empieza en el centro, va hacia abajo por 'groundCheckDistance'.
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, layerMask);
 
-        // Si el raycast golpea algo en la capa de suelo, está en el suelo.
+        // Si el raycast golpea algo en la capa de suelo, estï¿½ en el suelo.
         isGrounded = hit.collider != null;
 
-        // Visualización del Raycast (solo en el editor)
+        // Visualizaciï¿½n del Raycast (solo en el editor)
         // Debug.DrawRay(transform.position, Vector2.down * groundCheckDistance, isGrounded ? Color.green : Color.red);
     }
 
     private void UpdateRollingSound()
     {
-        // Rodando si está en el suelo Y moviéndose horizontalmente, Y no está descendiendo por la escalera (que detiene el movimiento horizontal)
+        // Rodando si estï¿½ en el suelo Y moviï¿½ndose horizontalmente, Y no estï¿½ descendiendo por la escalera (que detiene el movimiento horizontal)
         bool shouldBeRolling = isGrounded && Mathf.Abs(rb.linearVelocity.x) > 0.01f && !isRollingDownLadder;
 
         if (audioSource == null || rollingSoundClip == null)
@@ -120,21 +124,21 @@ public class VoltorbScript : MonoBehaviour
 
         if (shouldBeRolling && !audioSource.isPlaying)
         {
-            // Debería rodar, pero el sonido está detenido -> Empezar a rodar
+            // Deberï¿½a rodar, pero el sonido estï¿½ detenido -> Empezar a rodar
             audioSource.Play();
         }
         else if (!shouldBeRolling && audioSource.isPlaying)
         {
-            // No debería rodar, pero el sonido se está reproduciendo -> Detener la rodadura
+            // No deberï¿½a rodar, pero el sonido se estï¿½ reproduciendo -> Detener la rodadura
             audioSource.Stop();
         }
     }
 
-    // --- Métodos de Colisión y Trigger (Mantener los métodos existentes) ---
-    // ... (El resto de los métodos OnCollisionEnter2D, OnTriggerEnter2D, etc. se mantienen)
+    // --- Mï¿½todos de Colisiï¿½n y Trigger (Mantener los mï¿½todos existentes) ---
+    // ... (El resto de los mï¿½todos OnCollisionEnter2D, OnTriggerEnter2D, etc. se mantienen)
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject collidedObject = collision.gameObject;
         int collidedLayer = collidedObject.layer;
@@ -144,18 +148,18 @@ public class VoltorbScript : MonoBehaviour
             return;
         }
 
-        // 1. Manejar colisión con el suelo (Aterrizajes)
-        // Ya no es necesario manejar el suelo aquí para reanudar velocidad, FixedUpdate lo gestiona.
+        // 1. Manejar colisiï¿½n con el suelo (Aterrizajes)
+        // Ya no es necesario manejar el suelo aquï¿½ para reanudar velocidad, FixedUpdate lo gestiona.
         if (collidedLayer == groundLayer)
         {
-            // El barril aterrizó. Solo reanuda velocidad, no invierte dirección.
+            // El barril aterrizï¿½. Solo reanuda velocidad, no invierte direcciï¿½n.
             UpdateHorizontalVelocity();
             // A menos que quieras invertir en colisiones laterales con suelo normal, 
             // en cuyo caso llama a HandleGroundCollision(collidedObject, collision);
             return;
         }
 
-        // 2. Manejar colisión con la pared inversora (con Bouncing)
+        // 2. Manejar colisiï¿½n con la pared inversora (con Bouncing)
         if (collidedLayer == inverterWallLayer)
         {
             HandleInverterWallCollision(collision);
@@ -183,7 +187,7 @@ public class VoltorbScript : MonoBehaviour
         }
     }
 
-    // --- Métodos de Lógica de Colisión y Destrucción ---
+    // --- Mï¿½todos de Lï¿½gica de Colisiï¿½n y Destrucciï¿½n ---
 
     private bool HandleDestructiveCollisions(int layer, GameObject obj)
     {
@@ -191,7 +195,7 @@ public class VoltorbScript : MonoBehaviour
         {
             if (layer == playerLayer)
             {
-                // Asegúrate de que GameManager.Instance esté accesible si lo estás usando
+                // Asegï¿½rate de que GameManager.Instance estï¿½ accesible si lo estï¿½s usando
                 // if (GameManager.Instance != null) { GameManager.Instance.HandlePlayerHit(); }
                 Debug.Log("Voltorb ha golpeado al jugador.");
             }
@@ -208,21 +212,21 @@ public class VoltorbScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // ... (Mantén HandleGroundCollision y HandleInverterWallCollision si son necesarios para la inversión)
+    // ... (Mantï¿½n HandleGroundCollision y HandleInverterWallCollision si son necesarios para la inversiï¿½n)
 
     private void HandleInverterWallCollision(Collision2D collision)
     {
-        // Solo invertiremos la dirección si el golpe es claramente lateral.
+        // Solo invertiremos la direcciï¿½n si el golpe es claramente lateral.
         Vector2 normal = collision.contacts[0].normal;
         const float LATERAL_THRESHOLD = 0.3f; // Ajusta este valor
 
         if (Mathf.Abs(normal.y) < LATERAL_THRESHOLD)
         {
-            // Choca con pared -> Invertir dirección
+            // Choca con pared -> Invertir direcciï¿½n
             horizontalDirection *= -1f;
         }
 
-        // El rebote de Unity (bouncing) ya habrá aplicado un impulso, 
+        // El rebote de Unity (bouncing) ya habrï¿½ aplicado un impulso, 
         // pero aseguramos la velocidad base.
         UpdateHorizontalVelocity();
     }
@@ -233,7 +237,7 @@ public class VoltorbScript : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontalDirection * rollSpeed, rb.linearVelocity.y);
     }
 
-    // --- Lógica de Escalera ---
+    // --- Lï¿½gica de Escalera ---
 
     private void TryStartLadderDescent()
     {
@@ -248,7 +252,7 @@ public class VoltorbScript : MonoBehaviour
                 audioSource.Stop();
             }
 
-            // Deshabilitar colisión con el suelo y detener el movimiento horizontal
+            // Deshabilitar colisiï¿½n con el suelo y detener el movimiento horizontal
             ToggleGroundCollisions(true);
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
@@ -258,14 +262,14 @@ public class VoltorbScript : MonoBehaviour
     {
         isRollingDownLadder = false;
 
-        // 1. FORZAR la inversión de la dirección horizontal al terminar el descenso
+        // 1. FORZAR la inversiï¿½n de la direcciï¿½n horizontal al terminar el descenso
         horizontalDirection *= -1f;
 
         // 2. Reanudar Colisiones con el Suelo
         ToggleGroundCollisions(false);
 
-        // 3. Reanudar el movimiento horizontal con la NUEVA dirección
-        // El FixedUpdate gestionará la reanudación del sonido si aterriza en el suelo.
+        // 3. Reanudar el movimiento horizontal con la NUEVA direcciï¿½n
+        // El FixedUpdate gestionarï¿½ la reanudaciï¿½n del sonido si aterriza en el suelo.
         UpdateHorizontalVelocity();
     }
 
@@ -280,7 +284,7 @@ public class VoltorbScript : MonoBehaviour
         {
             ignoredGroundColliders.Clear();
 
-            // Buscar colisionadores de suelo en un radio pequeño alrededor del barril.
+            // Buscar colisionadores de suelo en un radio pequeï¿½o alrededor del barril.
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, OVERLAP_CHECK_RADIUS);
 
             foreach (Collider2D hitCollider in hitColliders)

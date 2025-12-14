@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: e96c9f516a76b604aaf283c80f79553b
+guid: 105cf319b64111e42a8a4ef893ecd154
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 154304986828337929
-    second: AnimacionExplode 1_0
+      213: -3291003539691358875
+    second: AnimacionExplosionCompleta_0
   - first:
-      213: 8116653786115805846
-    second: AnimacionExplode 1_1
+      213: -9090028365158087360
+    second: AnimacionExplosionCompleta_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +103,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AnimacionExplode 1_0
+      name: AnimacionExplosionCompleta_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 16
-        width: 276
-        height: 190
+        x: 0
+        y: 0
+        width: 39
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 90379f66193342200800000000000000
-      internalID: 154304986828337929
+      spriteID: f3e92e0b6a831614d9259998c531200c
+      internalID: -2084492096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AnimacionExplode 1_1
+      name: AnimacionExplosionCompleta_1
       rect:
         serializedVersion: 2
-        x: 288
-        y: 2
-        width: 294
-        height: 218
+        x: 39
+        y: 0
+        width: 39
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 69213465d9524a070800000000000000
-      internalID: 8116653786115805846
+      spriteID: 9786d490a751d9b4b930a03bcf5f0138
+      internalID: 1603511892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimacionExplosionCompleta_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6fc502423352a4cb3b08197c8e3087
+      internalID: -974081357
       vertices: []
       indices: 
       edges: []
@@ -150,7 +172,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1a8c6d1ad5358af41af4935ef346282e
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +182,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      AnimacionExplode 1_0: 154304986828337929
-      AnimacionExplode 1_1: 8116653786115805846
+      AnimacionExplosionCompleta_0: -2084492096
+      AnimacionExplosionCompleta_1: 1603511892
+      AnimacionExplosionCompleta_2: -974081357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
