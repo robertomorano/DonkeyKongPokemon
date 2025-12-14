@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     public AudioClip gameOverSoundClip;
     [Range(0f, 1f)] public float gameOverVolume = 1.0f;
 
+    [Header("Audio de Golpe")]
+    public AudioClip hitSoundClip;
+    [Range(0f, 1f)] public float hitVolume = 0.8f;
+
     [Header("HUD")]
     public Sprite fullLifeSprite;
     public Sprite halfLifeSprite;
@@ -42,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // Inicialización de AudioSource para Game Over
+        // Inicialización del AudioSource para Game Over
         if (gameOverAudioSource == null)
         {
             gameOverAudioSource = GetComponent<AudioSource>();
@@ -52,11 +56,12 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // Aseguramos que el audioSource de Game Over no se buclee.
         if (gameOverAudioSource != null)
         {
             gameOverAudioSource.loop = false;
             gameOverAudioSource.playOnAwake = false;
+            // Necesario para que el sonido de Game Over ignore el Time.timeScale=0
+            gameOverAudioSource.ignoreListenerPause = true;
         }
 
         if (player != null && startPosition != null)
@@ -64,6 +69,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = startPosition.transform.position;
         }
 
+        // Guarda el nombre de la escena actual
         CurrentSceneName = SceneManager.GetActiveScene().name;
         maxLifes = lifes;
 
@@ -74,14 +80,12 @@ public class GameManager : MonoBehaviour
             gameOverUI.SetActive(false);
         }
 
-        // Restaurar volumen al inicio del juego
         AudioListener.volume = 1f;
-        Time.timeScale = 1f; // Asegurar que el tiempo esté corriendo al inicio
+        Time.timeScale = 1f;
     }
 
     public void LoadCurrentScene()
     {
-        // Si hay alguna invocación pendiente de Game Over, la cancelamos
         CancelInvoke(nameof(ShowGameOverUI));
 
         if (gameOverUI != null)
@@ -92,14 +96,12 @@ public class GameManager : MonoBehaviour
         lifes = maxLifes;
         isDead = false;
 
-        // Restaurar volumen y tiempo
-        AudioListener.volume = 1f;
         Time.timeScale = 1f;
+        AudioListener.volume = 1f;
 
+        // Carga la escena guardada en Start()
         SceneManager.LoadScene(CurrentSceneName);
     }
-
-    // (El resto de los métodos de HUD y manejo de golpes se mantienen iguales)
 
     private void UpdateHUDVisual()
     {
@@ -131,6 +133,11 @@ public class GameManager : MonoBehaviour
     {
         if (isDead) return;
 
+        if (hitSoundClip != null)
+        {
+            AudioSource.PlayClipAtPoint(hitSoundClip, player.transform.position, hitVolume);
+        }
+
         lifes--;
 
         UpdateHUDVisual();
@@ -158,46 +165,33 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // ******************************************************
-    // >>> LÓGICA DE GAME OVER CORREGIDA CON RETRASO <<<
-    // ******************************************************
     public void GameOver()
     {
-        // 1. Mutear TODO el sonido del juego INMEDIATAMENTE
         AudioListener.volume = 0f;
 
-        // 2. Reproducir el sonido de Game Over INMEDIATAMENTE
         if (gameOverAudioSource != null && gameOverSoundClip != null)
         {
             gameOverAudioSource.PlayOneShot(gameOverSoundClip, gameOverVolume);
-            Debug.Log("Sonido de Game Over disparado.");
         }
 
-        // 3. Retrasar la congelación del tiempo y la aparición de la UI.
-        // Damos 0.1 segundos (unos 6 frames) para que el motor de audio se inicie antes de congelar el juego.
         Invoke(nameof(ShowGameOverUI), 0.1f);
     }
 
     private void ShowGameOverUI()
     {
-        // 1. Congelar el juego
         Time.timeScale = 0f;
 
-        // 2. Mostrar la pantalla de Game Over
         if (gameOverUI != null)
         {
             gameOverUI.SetActive(true);
         }
     }
-    // ******************************************************
 
 
     public void RestartGame()
     {
-        // Cancelamos la invocación si el jugador hace clic rápido
         CancelInvoke(nameof(ShowGameOverUI));
 
-        // Restaurar volumen y tiempo
         Time.timeScale = 1f;
         AudioListener.volume = 1f;
 
@@ -206,10 +200,10 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        // Restaurar volumen y tiempo
         Time.timeScale = 1f;
         AudioListener.volume = 1f;
 
+        // ESTA LÍNEA ES DONDE PUEDE ESTAR EL ERROR DE CONFIGURACIÓN
         SceneManager.LoadScene("MainMenu");
     }
 

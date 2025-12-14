@@ -273,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 1117789739}
     - target: {fileID: -60146638824076109, guid: 8a862d8fbcfde1845b4cdccb3f392b6c, type: 3}
       propertyPath: jumpStrength
-      value: 10
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -60146638824076109, guid: 8a862d8fbcfde1845b4cdccb3f392b6c, type: 3}
       propertyPath: jumpSoundClip
@@ -4093,6 +4093,8 @@ MonoBehaviour:
   gameOverAudioSource: {fileID: 1726544836}
   gameOverSoundClip: {fileID: 8300000, guid: 75154917250c9bd4bab92e501bd80a6b, type: 3}
   gameOverVolume: 1
+  hitSoundClip: {fileID: 8300000, guid: a251a5938ef211d40880c531b9a7feeb, type: 3}
+  hitVolume: 0.8
   fullLifeSprite: {fileID: -3335809461911554872, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
   halfLifeSprite: {fileID: -4352121681545738249, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
   lowLifeSprite: {fileID: -8203919188052218880, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
@@ -4721,7 +4723,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 787808327a9518d44944c18dc9c2d0ec, type: 3}
   m_Resource: {fileID: 8300000, guid: 787808327a9518d44944c18dc9c2d0ec, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
