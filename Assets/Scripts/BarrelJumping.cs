@@ -2,12 +2,20 @@ using UnityEngine;
 
 public class BarrelJumping : MonoBehaviour
 {
+    // --- Configuración de Movimiento ---
     [Header("Configuración de Movimiento")]
     [Tooltip("Velocidad horizontal constante del barril.")]
     public float velocidadHorizontal = 1f;
     [Tooltip("Fuerza del impulso vertical al saltar.")]
     public float fuerzaSalto = 4f;
 
+    // --- Configuración de Audio ---
+    [Header("Configuración de Audio")]
+    public AudioSource audioSource;
+    public AudioClip rollingSoundClip;
+    [Range(0f, 1f)] public float rollingVolume = 0.6f;
+
+    // --- Configuración de Colisión ---
     [Header("Configuración de Colisión")]
     [Tooltip("Máscara de capas que definen el suelo o plataformas válidas.")]
     public LayerMask capaSuelo;
@@ -20,8 +28,6 @@ public class BarrelJumping : MonoBehaviour
     private Rigidbody2D rb;
     private float direccionHorizontal = 1f; // 1 = derecha, -1 = izquierda
     private bool puedeSaltar = false;
-
-    // Para la rotación del sprite
     private SpriteRenderer spriteRenderer;
 
     void Awake()
@@ -34,6 +40,27 @@ public class BarrelJumping : MonoBehaviour
             Debug.LogError("SpriteRenderer component not found on Jumping Barrel.");
         }
 
+        // >>> LÓGICA DE INICIALIZACIÓN DE AUDIO <<<
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                // Si no existe, lo añade
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
+        }
+
+        if (audioSource != null && rollingSoundClip != null)
+        {
+            audioSource.clip = rollingSoundClip;
+            audioSource.loop = true;
+            audioSource.volume = rollingVolume;
+            audioSource.Play(); // Comienza el sonido inmediatamente
+        }
+        // >>> FIN LÓGICA DE AUDIO <<<
+
+
         // Asegurar que el barril comienza con el movimiento horizontal.
         ActualizarVelocidadHorizontal();
     }
@@ -41,12 +68,12 @@ public class BarrelJumping : MonoBehaviour
     void FixedUpdate()
     {
         ActualizarVelocidadHorizontal();
-        // Llama a la lógica de orientación del sprite en cada frame
         ActualizarOrientacionSprite();
     }
 
     private void ActualizarVelocidadHorizontal()
     {
+        // Se ha cambiado a 'velocity' por consistencia con otros scripts de Unity
         rb.linearVelocity = new Vector2(direccionHorizontal * velocidadHorizontal, rb.linearVelocity.y);
     }
 
@@ -60,32 +87,35 @@ public class BarrelJumping : MonoBehaviour
 
     private void ActualizarOrientacionSprite()
     {
-        // Si la dirección horizontal es positiva (moviéndose a la derecha)
+        if (spriteRenderer == null) return;
+
         if (direccionHorizontal > 0.01f)
         {
-            // No voltear (normalmente false o 0 grados)
             spriteRenderer.flipX = false;
         }
-        // Si la dirección horizontal es negativa (moviéndose a la izquierda)
         else if (direccionHorizontal < -0.01f)
         {
-            // Voltear horizontalmente
             spriteRenderer.flipX = true;
         }
     }
 
     private void ManejarColisionPared()
     {
-        // Invierte la dirección horizontal
         direccionHorizontal *= -1f;
         ActualizarVelocidadHorizontal();
     }
 
     private void ManejarDestruccion(GameObject collidedObject)
     {
+        // >>> LÓGICA PARA DETENER EL SONIDO AL MORIR <<<
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        // >>> FIN LÓGICA PARA DETENER EL SONIDO AL MORIR <<<
+
         if (collidedObject.CompareTag("Player"))
         {
-            // Si golpea al jugador, manejamos el daño antes de la destrucción
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.HandlePlayerHit();

@@ -135,6 +135,7 @@ MonoBehaviour:
   explosiveSpawnChance: 0.25
   minTime: 2
   maxTime: 4
+  launchSound: {fileID: 8300000, guid: 1fee77088d5140b41a29bc51eea0acdd, type: 3}
 --- !u!95 &7123313673807317550
 Animator:
   serializedVersion: 7
