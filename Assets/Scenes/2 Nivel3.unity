@@ -4257,11 +4257,14 @@ MonoBehaviour:
   player: {fileID: 2124444583}
   startPosition: {fileID: 0}
   gameOverUI: {fileID: 1718116909}
-  lifes: 3
+  gameOverAudioSource: {fileID: 0}
+  gameOverSoundClip: {fileID: 0}
+  gameOverVolume: 1
   fullLifeSprite: {fileID: -3335809461911554872, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
   halfLifeSprite: {fileID: -4352121681545738249, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
   lowLifeSprite: {fileID: -8203919188052218880, guid: 14bc8f0f746a0c847b3be071fd30d5a6, type: 3}
   hudSpriteRenderer: {fileID: 690877546}
+  lifes: 3
 --- !u!4 &1751287188
 Transform:
   m_ObjectHideFlags: 0
@@ -4933,11 +4936,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181353951850621037, guid: 0ee11668986fc1d42a6900699d3c3313, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.85
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 1181353951850621037, guid: 0ee11668986fc1d42a6900699d3c3313, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.94
+      value: -3.06
       objectReference: {fileID: 0}
     - target: {fileID: 1181353951850621037, guid: 0ee11668986fc1d42a6900699d3c3313, type: 3}
       propertyPath: m_LocalPosition.z

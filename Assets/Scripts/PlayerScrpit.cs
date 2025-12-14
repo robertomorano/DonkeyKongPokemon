@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
         FlipSprite();
         ActualizarAnimator();
 
-        if (hasHammer && !climbing && Input.GetMouseButtonDown(0) && Time.time >= nextAttackTime)
+        if (hasHammer && !climbing && Time.time >= nextAttackTime)
         {
             PerformHammerAttack();
         }
@@ -170,6 +170,8 @@ public class Player : MonoBehaviour
         hasHammer = false;
         isAttacking = false;
         Debug.Log("Martillo Desactivado: El tiempo ha terminado.");
+        animator.SetBool("rod", true);
+
     }
 
     private void PerformHammerAttack()
@@ -183,6 +185,7 @@ public class Player : MonoBehaviour
         if (oneShotAudioSource != null && hammerAttackSoundClip != null)
         {
             oneShotAudioSource.PlayOneShot(hammerAttackSoundClip, hammerAttackVolume);
+            animator.SetTrigger("Attack");
         }
         // *****************************************
 
@@ -440,6 +443,7 @@ public class Player : MonoBehaviour
 
             Gizmos.color = isAttacking ? Color.yellow : Color.red;
             Gizmos.DrawWireSphere(attackOrigin, attackRange / 2f);
+            
         }
     }
 
@@ -460,6 +464,7 @@ public class Player : MonoBehaviour
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.HandlePlayerHit();
+                animator.SetBool("rod", true);
             }
         }
     }
