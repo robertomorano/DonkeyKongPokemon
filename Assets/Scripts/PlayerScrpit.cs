@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundRadius = 0.18f;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Transform spriteTransform; // ¡Esta referencia se mantiene!
+    [SerializeField] private Transform spriteTransform;
 
     [Header("Audio")]
     public AudioSource loopAudioSource;
@@ -26,9 +26,12 @@ public class Player : MonoBehaviour
     [Range(0f, 1f)] public float jumpVolume = 1.0f;
     public AudioClip runningSoundClip;
     [Range(0f, 1f)] public float runningVolume = 0.5f;
+    // >>> NUEVA VARIABLE DE AUDIO DEL MARTILLO <<<
+    public AudioClip hammerAttackSoundClip;
+    [Range(0f, 1f)] public float hammerAttackVolume = 0.8f;
 
     [Header("Martillo")]
-    public float attackRange = 1.5f;   // Alcance del ataque del martillo
+    public float attackRange = 1.5f;    // Alcance del ataque del martillo
     public float attackCooldown = 0.5f; // Frecuencia con la que se puede golpear
 
     private Rigidbody2D rb;
@@ -93,24 +96,25 @@ public class Player : MonoBehaviour
     {
         AudioSource[] sources = GetComponents<AudioSource>();
 
-        if (sources.Length == 0)
-        {
-            loopAudioSource = gameObject.AddComponent<AudioSource>();
-            oneShotAudioSource = gameObject.AddComponent<AudioSource>();
-        }
-        else if (sources.Length == 1)
-        {
-            loopAudioSource = sources[0];
-            oneShotAudioSource = gameObject.AddComponent<AudioSource>();
-        }
-        else
+        // Si ya existen dos o más AudioSources, los asignamos
+        if (sources.Length >= 2)
         {
             loopAudioSource = sources[0];
             oneShotAudioSource = sources[1];
         }
-
-        if (loopAudioSource == null) loopAudioSource = sources.Length > 0 ? sources[0] : gameObject.AddComponent<AudioSource>();
-        if (oneShotAudioSource == null) oneShotAudioSource = sources.Length > 1 ? sources[1] : gameObject.AddComponent<AudioSource>();
+        else // Si faltan, los creamos
+        {
+            if (sources.Length == 1)
+            {
+                loopAudioSource = sources[0];
+                oneShotAudioSource = gameObject.AddComponent<AudioSource>();
+            }
+            else // sources.Length == 0
+            {
+                loopAudioSource = gameObject.AddComponent<AudioSource>();
+                oneShotAudioSource = gameObject.AddComponent<AudioSource>();
+            }
+        }
     }
 
     void Update()
@@ -175,6 +179,13 @@ public class Player : MonoBehaviour
         nextAttackTime = Time.time + attackCooldown;
         isAttacking = true;
 
+        // >>> REPRODUCCIÓN DEL SONIDO DEL MARTILLO <<<
+        if (oneShotAudioSource != null && hammerAttackSoundClip != null)
+        {
+            oneShotAudioSource.PlayOneShot(hammerAttackSoundClip, hammerAttackVolume);
+        }
+        // *****************************************
+
         Vector3 attackOrigin = transform.position;
         attackOrigin += (facingRight ? Vector3.right : Vector3.left) * (attackRange / 2f);
 
@@ -187,6 +198,7 @@ public class Player : MonoBehaviour
             if (hit.gameObject.layer == barrelLayer)
             {
                 Debug.Log("¡Martillo golpeó y destruyó a: " + hit.name + "!");
+                // Se asume que el barril es un Electrode y debe detonar/destruirse
                 Destroy(hit.gameObject);
             }
         }
@@ -245,6 +257,8 @@ public class Player : MonoBehaviour
             oneShotAudioSource.PlayOneShot(jumpSoundClip, jumpVolume);
         }
     }
+
+    // El resto de los métodos de control de sonido y movimiento se mantienen igual...
 
     private void ControlarSonidoEscalada()
     {
@@ -351,12 +365,13 @@ public class Player : MonoBehaviour
         if (animator == null) return;
 
         bool isRunning = horizontal != 0f && grounded;
-
         bool isClimbingAnimated = climbing && Mathf.Abs(verticalInput) > 0.01f;
 
         animator.SetBool("Running", isRunning);
         animator.SetBool("Climbing", isClimbingAnimated);
-        // Opcional: animator.SetBool("HasHammer", hasHammer);
+        // Opcional: animador.SetBool("HasHammer", hasHammer);
+        // Opcional: Puedes añadir un trigger para la animación de ataque aquí:
+        // if (isAttacking) animator.SetTrigger("HammerAttack");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
