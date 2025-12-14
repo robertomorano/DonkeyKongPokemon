@@ -166,13 +166,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc135cbbff28994c8cf4d73ace4c928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollSpeed: 3
+  rollSpeed: 1.5
   ladderDescentChance: 0.4
   audioSource: {fileID: 0}
   rollingSoundClip: {fileID: 8300000, guid: 50f0dd1cb4a33b74db38dc17fc2bd67a, type: 3}
   groundCheckDistance: 0.6
   rb: {fileID: 0}
   horizontalDirection: -1
+  groundLayer: 0
+  playerLayer: 0
+  killZoneLayer: 0
 --- !u!82 &2152471375746469576
 AudioSource:
   m_ObjectHideFlags: 0
