@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1250d45b41a95747b90ca3b59d9854b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 3
   jumpStrength: 2
   gravityScale: 3
   climbSpeed: 1.5
