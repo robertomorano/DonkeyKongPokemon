@@ -67,7 +67,9 @@ public class ElectrodeScript : VoltorbScript
         if (anim != null)
         {
             anim.SetTrigger(EXPLODE_TRIGGER);
+            Invoke(nameof(FinishExplosion), 3.0f);
         }
+        
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision)
@@ -80,6 +82,7 @@ public class ElectrodeScript : VoltorbScript
             {
                 CancelInvoke(nameof(PrepareExplosion));
                 PrepareExplosion();
+                
             }
         }
     }
